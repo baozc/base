@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${server.url}:8080/eureka/
+  instance:
+    hostname: localhost
+
+server:
+  port: 8200
+  url: localhost
+  servlet:
+    context-path: /consumer
+
+#logging:
+#  config: classpath:dev.xml
+
+info:
+  app:
+    name: ${spring.application.name}
+    hostname: ${eureka.instance.hostname}
+    server-hostname: ${server.url}
+    defaultZone: http://${eureka.instance.hostname}:8080/eureka/

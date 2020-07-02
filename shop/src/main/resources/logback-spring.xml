@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="console_pattern" value="%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%t]){faint} %clr(%-40.40logger{39}){cyan} %clr(-){faint} %clr([%20.20M:%-4L]){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+    <property name="file_pattern" value="%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+    <property name="logPath" value="${user.home}/apps/shop" />
+    <!--<property name="logPath" value="/apps/logs" />-->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+
+    <!-- CONSOLE start -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8">
+            <pattern>${console_pattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- CONSOLE end -->
+
+
+    <!-- INFO start -->
+    <appender name="INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}/info.log</File>
+        <append>true</append>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/info.log.%d</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>${file_pattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- INFO end -->
+
+
+    <!-- ERROR start -->
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}/error.log</File>
+        <append>true</append>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/error.log.%d</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>${file_pattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- ERROR end -->
+
+    <logger name="cn.com.shop.mapper" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="INFO"/>
+    </logger>
+
+    <logger name="org.springframework.web" level="trace" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="INFO"/>
+    </logger>
+
+
+    <!--<springProfile name="dev">-->
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    <!--</springProfile>-->
+    <springProfile name="test,gray,prod">
+        <root level="INFO">
+            <appender-ref ref="INFO"/>
+            <appender-ref ref="ERROR"/>
+        </root>
+    </springProfile>
+</configuration>

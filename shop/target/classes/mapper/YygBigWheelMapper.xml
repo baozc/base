@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygBigWheelMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygBigWheel">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="photoId" jdbcType="BIGINT" property="photoid" />
+    <result column="photoPath" jdbcType="VARCHAR" property="photopath" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="wheelCalibrations" jdbcType="VARCHAR" property="wheelcalibrations" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="cn.com.shop.entity.YygBigWheel">
+    <result column="activeRule" jdbcType="LONGVARCHAR" property="activerule" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, description, photoId, photoPath, title, userId, wheelCalibrations
+  </sql>
+  <sql id="Blob_Column_List">
+    activeRule
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from yyg_big_wheel
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_big_wheel
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygBigWheel">
+    insert into yyg_big_wheel (id, createBy, createById, 
+      createTime, deleteStatus, lastModifyBy, 
+      lastModifyById, lastModifyTime, version, 
+      description, photoId, photoPath, 
+      title, userId, wheelCalibrations, 
+      activeRule)
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
+      #{description,jdbcType=VARCHAR}, #{photoid,jdbcType=BIGINT}, #{photopath,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{userid,jdbcType=BIGINT}, #{wheelcalibrations,jdbcType=VARCHAR}, 
+      #{activerule,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygBigWheel">
+    insert into yyg_big_wheel
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="photoid != null">
+        photoId,
+      </if>
+      <if test="photopath != null">
+        photoPath,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="wheelcalibrations != null">
+        wheelCalibrations,
+      </if>
+      <if test="activerule != null">
+        activeRule,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="photoid != null">
+        #{photoid,jdbcType=BIGINT},
+      </if>
+      <if test="photopath != null">
+        #{photopath,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="wheelcalibrations != null">
+        #{wheelcalibrations,jdbcType=VARCHAR},
+      </if>
+      <if test="activerule != null">
+        #{activerule,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygBigWheel">
+    update yyg_big_wheel
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="photoid != null">
+        photoId = #{photoid,jdbcType=BIGINT},
+      </if>
+      <if test="photopath != null">
+        photoPath = #{photopath,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="wheelcalibrations != null">
+        wheelCalibrations = #{wheelcalibrations,jdbcType=VARCHAR},
+      </if>
+      <if test="activerule != null">
+        activeRule = #{activerule,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.com.shop.entity.YygBigWheel">
+    update yyg_big_wheel
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      description = #{description,jdbcType=VARCHAR},
+      photoId = #{photoid,jdbcType=BIGINT},
+      photoPath = #{photopath,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=BIGINT},
+      wheelCalibrations = #{wheelcalibrations,jdbcType=VARCHAR},
+      activeRule = #{activerule,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygBigWheel">
+    update yyg_big_wheel
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      description = #{description,jdbcType=VARCHAR},
+      photoId = #{photoid,jdbcType=BIGINT},
+      photoPath = #{photopath,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=BIGINT},
+      wheelCalibrations = #{wheelcalibrations,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

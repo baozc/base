@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: wx
+build:
+  artifacts:
+  - image: baozc/jibtest
+    jib:
+      project: baozc:wx
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml

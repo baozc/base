@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygBigWheelPrizeMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygBigWheelPrize">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="acceptPrizeType" jdbcType="INTEGER" property="acceptprizetype" />
+    <result column="bigWheelId" jdbcType="BIGINT" property="bigwheelid" />
+    <result column="coupons" jdbcType="VARCHAR" property="coupons" />
+    <result column="onLineUrl" jdbcType="VARCHAR" property="onlineurl" />
+    <result column="photoId" jdbcType="BIGINT" property="photoid" />
+    <result column="photoPath" jdbcType="VARCHAR" property="photopath" />
+    <result column="prizeContent" jdbcType="VARCHAR" property="prizecontent" />
+    <result column="prizeCount" jdbcType="INTEGER" property="prizecount" />
+    <result column="prizeLevel" jdbcType="INTEGER" property="prizelevel" />
+    <result column="prizeName" jdbcType="VARCHAR" property="prizename" />
+    <result column="prizeRate" jdbcType="INTEGER" property="prizerate" />
+    <result column="prizeScore" jdbcType="BIGINT" property="prizescore" />
+    <result column="prizeType" jdbcType="INTEGER" property="prizetype" />
+    <result column="takeSelfAddress" jdbcType="VARCHAR" property="takeselfaddress" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, acceptPrizeType, bigWheelId, coupons, onLineUrl, photoId, 
+    photoPath, prizeContent, prizeCount, prizeLevel, prizeName, prizeRate, prizeScore, 
+    prizeType, takeSelfAddress, userId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from yyg_big_wheel_prize
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_big_wheel_prize
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygBigWheelPrize">
+    insert into yyg_big_wheel_prize (id, createBy, createById, 
+      createTime, deleteStatus, lastModifyBy, 
+      lastModifyById, lastModifyTime, version, 
+      acceptPrizeType, bigWheelId, coupons, 
+      onLineUrl, photoId, photoPath, 
+      prizeContent, prizeCount, prizeLevel, 
+      prizeName, prizeRate, prizeScore, 
+      prizeType, takeSelfAddress, userId
+      )
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
+      #{acceptprizetype,jdbcType=INTEGER}, #{bigwheelid,jdbcType=BIGINT}, #{coupons,jdbcType=VARCHAR}, 
+      #{onlineurl,jdbcType=VARCHAR}, #{photoid,jdbcType=BIGINT}, #{photopath,jdbcType=VARCHAR}, 
+      #{prizecontent,jdbcType=VARCHAR}, #{prizecount,jdbcType=INTEGER}, #{prizelevel,jdbcType=INTEGER}, 
+      #{prizename,jdbcType=VARCHAR}, #{prizerate,jdbcType=INTEGER}, #{prizescore,jdbcType=BIGINT}, 
+      #{prizetype,jdbcType=INTEGER}, #{takeselfaddress,jdbcType=VARCHAR}, #{userid,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygBigWheelPrize">
+    insert into yyg_big_wheel_prize
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="acceptprizetype != null">
+        acceptPrizeType,
+      </if>
+      <if test="bigwheelid != null">
+        bigWheelId,
+      </if>
+      <if test="coupons != null">
+        coupons,
+      </if>
+      <if test="onlineurl != null">
+        onLineUrl,
+      </if>
+      <if test="photoid != null">
+        photoId,
+      </if>
+      <if test="photopath != null">
+        photoPath,
+      </if>
+      <if test="prizecontent != null">
+        prizeContent,
+      </if>
+      <if test="prizecount != null">
+        prizeCount,
+      </if>
+      <if test="prizelevel != null">
+        prizeLevel,
+      </if>
+      <if test="prizename != null">
+        prizeName,
+      </if>
+      <if test="prizerate != null">
+        prizeRate,
+      </if>
+      <if test="prizescore != null">
+        prizeScore,
+      </if>
+      <if test="prizetype != null">
+        prizeType,
+      </if>
+      <if test="takeselfaddress != null">
+        takeSelfAddress,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="acceptprizetype != null">
+        #{acceptprizetype,jdbcType=INTEGER},
+      </if>
+      <if test="bigwheelid != null">
+        #{bigwheelid,jdbcType=BIGINT},
+      </if>
+      <if test="coupons != null">
+        #{coupons,jdbcType=VARCHAR},
+      </if>
+      <if test="onlineurl != null">
+        #{onlineurl,jdbcType=VARCHAR},
+      </if>
+      <if test="photoid != null">
+        #{photoid,jdbcType=BIGINT},
+      </if>
+      <if test="photopath != null">
+        #{photopath,jdbcType=VARCHAR},
+      </if>
+      <if test="prizecontent != null">
+        #{prizecontent,jdbcType=VARCHAR},
+      </if>
+      <if test="prizecount != null">
+        #{prizecount,jdbcType=INTEGER},
+      </if>
+      <if test="prizelevel != null">
+        #{prizelevel,jdbcType=INTEGER},
+      </if>
+      <if test="prizename != null">
+        #{prizename,jdbcType=VARCHAR},
+      </if>
+      <if test="prizerate != null">
+        #{prizerate,jdbcType=INTEGER},
+      </if>
+      <if test="prizescore != null">
+        #{prizescore,jdbcType=BIGINT},
+      </if>
+      <if test="prizetype != null">
+        #{prizetype,jdbcType=INTEGER},
+      </if>
+      <if test="takeselfaddress != null">
+        #{takeselfaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygBigWheelPrize">
+    update yyg_big_wheel_prize
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="acceptprizetype != null">
+        acceptPrizeType = #{acceptprizetype,jdbcType=INTEGER},
+      </if>
+      <if test="bigwheelid != null">
+        bigWheelId = #{bigwheelid,jdbcType=BIGINT},
+      </if>
+      <if test="coupons != null">
+        coupons = #{coupons,jdbcType=VARCHAR},
+      </if>
+      <if test="onlineurl != null">
+        onLineUrl = #{onlineurl,jdbcType=VARCHAR},
+      </if>
+      <if test="photoid != null">
+        photoId = #{photoid,jdbcType=BIGINT},
+      </if>
+      <if test="photopath != null">
+        photoPath = #{photopath,jdbcType=VARCHAR},
+      </if>
+      <if test="prizecontent != null">
+        prizeContent = #{prizecontent,jdbcType=VARCHAR},
+      </if>
+      <if test="prizecount != null">
+        prizeCount = #{prizecount,jdbcType=INTEGER},
+      </if>
+      <if test="prizelevel != null">
+        prizeLevel = #{prizelevel,jdbcType=INTEGER},
+      </if>
+      <if test="prizename != null">
+        prizeName = #{prizename,jdbcType=VARCHAR},
+      </if>
+      <if test="prizerate != null">
+        prizeRate = #{prizerate,jdbcType=INTEGER},
+      </if>
+      <if test="prizescore != null">
+        prizeScore = #{prizescore,jdbcType=BIGINT},
+      </if>
+      <if test="prizetype != null">
+        prizeType = #{prizetype,jdbcType=INTEGER},
+      </if>
+      <if test="takeselfaddress != null">
+        takeSelfAddress = #{takeselfaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygBigWheelPrize">
+    update yyg_big_wheel_prize
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      acceptPrizeType = #{acceptprizetype,jdbcType=INTEGER},
+      bigWheelId = #{bigwheelid,jdbcType=BIGINT},
+      coupons = #{coupons,jdbcType=VARCHAR},
+      onLineUrl = #{onlineurl,jdbcType=VARCHAR},
+      photoId = #{photoid,jdbcType=BIGINT},
+      photoPath = #{photopath,jdbcType=VARCHAR},
+      prizeContent = #{prizecontent,jdbcType=VARCHAR},
+      prizeCount = #{prizecount,jdbcType=INTEGER},
+      prizeLevel = #{prizelevel,jdbcType=INTEGER},
+      prizeName = #{prizename,jdbcType=VARCHAR},
+      prizeRate = #{prizerate,jdbcType=INTEGER},
+      prizeScore = #{prizescore,jdbcType=BIGINT},
+      prizeType = #{prizetype,jdbcType=INTEGER},
+      takeSelfAddress = #{takeselfaddress,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

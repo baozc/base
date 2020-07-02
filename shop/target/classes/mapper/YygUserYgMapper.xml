@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygUserYgMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygUserYg">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="buyDateLong" jdbcType="BIGINT" property="buydatelong" />
+    <result column="buyNum" jdbcType="BIGINT" property="buynum" />
+    <result column="buyUserId" jdbcType="BIGINT" property="buyuserid" />
+    <result column="buyUserLogoPath" jdbcType="VARCHAR" property="buyuserlogopath" />
+    <result column="buyUserNickName" jdbcType="VARCHAR" property="buyusernickname" />
+    <result column="clientIp" jdbcType="VARCHAR" property="clientip" />
+    <result column="ipAddr" jdbcType="VARCHAR" property="ipaddr" />
+    <result column="payTradeId" jdbcType="BIGINT" property="paytradeid" />
+    <result column="period" jdbcType="INTEGER" property="period" />
+    <result column="productId" jdbcType="BIGINT" property="productid" />
+    <result column="productName" jdbcType="VARCHAR" property="productname" />
+    <result column="singlePrice" jdbcType="BIGINT" property="singleprice" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="totalNum" jdbcType="BIGINT" property="totalnum" />
+    <result column="win" jdbcType="BIT" property="win" />
+    <result column="winNo" jdbcType="BIGINT" property="winno" />
+    <result column="ygProductId" jdbcType="BIGINT" property="ygproductid" />
+    <result column="is_send_sms" jdbcType="VARCHAR" property="isSendSms" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="cn.com.shop.entity.YygUserYg">
+    <result column="buyNos" jdbcType="LONGVARCHAR" property="buynos" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, buyDateLong, buyNum, buyUserId, buyUserLogoPath, buyUserNickName, 
+    clientIp, ipAddr, payTradeId, period, productId, productName, singlePrice, status, 
+    totalNum, win, winNo, ygProductId, is_send_sms
+  </sql>
+  <sql id="Blob_Column_List">
+    buyNos
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from yyg_user_yg
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_user_yg
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygUserYg">
+    insert into yyg_user_yg (id, createBy, createById, 
+      createTime, deleteStatus, lastModifyBy, 
+      lastModifyById, lastModifyTime, version, 
+      buyDateLong, buyNum, buyUserId, 
+      buyUserLogoPath, buyUserNickName, clientIp, 
+      ipAddr, payTradeId, period, 
+      productId, productName, singlePrice, 
+      status, totalNum, win, winNo, 
+      ygProductId, is_send_sms, buyNos
+      )
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
+      #{buydatelong,jdbcType=BIGINT}, #{buynum,jdbcType=BIGINT}, #{buyuserid,jdbcType=BIGINT}, 
+      #{buyuserlogopath,jdbcType=VARCHAR}, #{buyusernickname,jdbcType=VARCHAR}, #{clientip,jdbcType=VARCHAR}, 
+      #{ipaddr,jdbcType=VARCHAR}, #{paytradeid,jdbcType=BIGINT}, #{period,jdbcType=INTEGER}, 
+      #{productid,jdbcType=BIGINT}, #{productname,jdbcType=VARCHAR}, #{singleprice,jdbcType=BIGINT}, 
+      #{status,jdbcType=INTEGER}, #{totalnum,jdbcType=BIGINT}, #{win,jdbcType=BIT}, #{winno,jdbcType=BIGINT}, 
+      #{ygproductid,jdbcType=BIGINT}, #{isSendSms,jdbcType=VARCHAR}, #{buynos,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygUserYg">
+    insert into yyg_user_yg
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="buydatelong != null">
+        buyDateLong,
+      </if>
+      <if test="buynum != null">
+        buyNum,
+      </if>
+      <if test="buyuserid != null">
+        buyUserId,
+      </if>
+      <if test="buyuserlogopath != null">
+        buyUserLogoPath,
+      </if>
+      <if test="buyusernickname != null">
+        buyUserNickName,
+      </if>
+      <if test="clientip != null">
+        clientIp,
+      </if>
+      <if test="ipaddr != null">
+        ipAddr,
+      </if>
+      <if test="paytradeid != null">
+        payTradeId,
+      </if>
+      <if test="period != null">
+        period,
+      </if>
+      <if test="productid != null">
+        productId,
+      </if>
+      <if test="productname != null">
+        productName,
+      </if>
+      <if test="singleprice != null">
+        singlePrice,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="totalnum != null">
+        totalNum,
+      </if>
+      <if test="win != null">
+        win,
+      </if>
+      <if test="winno != null">
+        winNo,
+      </if>
+      <if test="ygproductid != null">
+        ygProductId,
+      </if>
+      <if test="isSendSms != null">
+        is_send_sms,
+      </if>
+      <if test="buynos != null">
+        buyNos,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="buydatelong != null">
+        #{buydatelong,jdbcType=BIGINT},
+      </if>
+      <if test="buynum != null">
+        #{buynum,jdbcType=BIGINT},
+      </if>
+      <if test="buyuserid != null">
+        #{buyuserid,jdbcType=BIGINT},
+      </if>
+      <if test="buyuserlogopath != null">
+        #{buyuserlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="buyusernickname != null">
+        #{buyusernickname,jdbcType=VARCHAR},
+      </if>
+      <if test="clientip != null">
+        #{clientip,jdbcType=VARCHAR},
+      </if>
+      <if test="ipaddr != null">
+        #{ipaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="paytradeid != null">
+        #{paytradeid,jdbcType=BIGINT},
+      </if>
+      <if test="period != null">
+        #{period,jdbcType=INTEGER},
+      </if>
+      <if test="productid != null">
+        #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="productname != null">
+        #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="singleprice != null">
+        #{singleprice,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="totalnum != null">
+        #{totalnum,jdbcType=BIGINT},
+      </if>
+      <if test="win != null">
+        #{win,jdbcType=BIT},
+      </if>
+      <if test="winno != null">
+        #{winno,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductid != null">
+        #{ygproductid,jdbcType=BIGINT},
+      </if>
+      <if test="isSendSms != null">
+        #{isSendSms,jdbcType=VARCHAR},
+      </if>
+      <if test="buynos != null">
+        #{buynos,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygUserYg">
+    update yyg_user_yg
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="buydatelong != null">
+        buyDateLong = #{buydatelong,jdbcType=BIGINT},
+      </if>
+      <if test="buynum != null">
+        buyNum = #{buynum,jdbcType=BIGINT},
+      </if>
+      <if test="buyuserid != null">
+        buyUserId = #{buyuserid,jdbcType=BIGINT},
+      </if>
+      <if test="buyuserlogopath != null">
+        buyUserLogoPath = #{buyuserlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="buyusernickname != null">
+        buyUserNickName = #{buyusernickname,jdbcType=VARCHAR},
+      </if>
+      <if test="clientip != null">
+        clientIp = #{clientip,jdbcType=VARCHAR},
+      </if>
+      <if test="ipaddr != null">
+        ipAddr = #{ipaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="paytradeid != null">
+        payTradeId = #{paytradeid,jdbcType=BIGINT},
+      </if>
+      <if test="period != null">
+        period = #{period,jdbcType=INTEGER},
+      </if>
+      <if test="productid != null">
+        productId = #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="productname != null">
+        productName = #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="singleprice != null">
+        singlePrice = #{singleprice,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="totalnum != null">
+        totalNum = #{totalnum,jdbcType=BIGINT},
+      </if>
+      <if test="win != null">
+        win = #{win,jdbcType=BIT},
+      </if>
+      <if test="winno != null">
+        winNo = #{winno,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductid != null">
+        ygProductId = #{ygproductid,jdbcType=BIGINT},
+      </if>
+      <if test="isSendSms != null">
+        is_send_sms = #{isSendSms,jdbcType=VARCHAR},
+      </if>
+      <if test="buynos != null">
+        buyNos = #{buynos,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.com.shop.entity.YygUserYg">
+    update yyg_user_yg
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      buyDateLong = #{buydatelong,jdbcType=BIGINT},
+      buyNum = #{buynum,jdbcType=BIGINT},
+      buyUserId = #{buyuserid,jdbcType=BIGINT},
+      buyUserLogoPath = #{buyuserlogopath,jdbcType=VARCHAR},
+      buyUserNickName = #{buyusernickname,jdbcType=VARCHAR},
+      clientIp = #{clientip,jdbcType=VARCHAR},
+      ipAddr = #{ipaddr,jdbcType=VARCHAR},
+      payTradeId = #{paytradeid,jdbcType=BIGINT},
+      period = #{period,jdbcType=INTEGER},
+      productId = #{productid,jdbcType=BIGINT},
+      productName = #{productname,jdbcType=VARCHAR},
+      singlePrice = #{singleprice,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      totalNum = #{totalnum,jdbcType=BIGINT},
+      win = #{win,jdbcType=BIT},
+      winNo = #{winno,jdbcType=BIGINT},
+      ygProductId = #{ygproductid,jdbcType=BIGINT},
+      is_send_sms = #{isSendSms,jdbcType=VARCHAR},
+      buyNos = #{buynos,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygUserYg">
+    update yyg_user_yg
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      buyDateLong = #{buydatelong,jdbcType=BIGINT},
+      buyNum = #{buynum,jdbcType=BIGINT},
+      buyUserId = #{buyuserid,jdbcType=BIGINT},
+      buyUserLogoPath = #{buyuserlogopath,jdbcType=VARCHAR},
+      buyUserNickName = #{buyusernickname,jdbcType=VARCHAR},
+      clientIp = #{clientip,jdbcType=VARCHAR},
+      ipAddr = #{ipaddr,jdbcType=VARCHAR},
+      payTradeId = #{paytradeid,jdbcType=BIGINT},
+      period = #{period,jdbcType=INTEGER},
+      productId = #{productid,jdbcType=BIGINT},
+      productName = #{productname,jdbcType=VARCHAR},
+      singlePrice = #{singleprice,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      totalNum = #{totalnum,jdbcType=BIGINT},
+      win = #{win,jdbcType=BIT},
+      winNo = #{winno,jdbcType=BIGINT},
+      ygProductId = #{ygproductid,jdbcType=BIGINT},
+      is_send_sms = #{isSendSms,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

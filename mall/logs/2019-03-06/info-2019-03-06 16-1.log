@@ -1,0 +1,510 @@
+[2m2019-03-06 16:31:18.916[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.c.EurekaClientApplication              [rofileInfo:659 ][0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2019-03-06 16:31:18.960[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mConfigServletWebServerApplicationContext [areRefresh:590 ][0;39m [2m:[0;39m Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@256f8274: startup date [Wed Mar 06 16:31:18 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2a54a73f
+[2m2019-03-06 16:31:20.018[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.c.s.GenericScope                   [lizationId:294 ][0;39m [2m:[0;39m BeanFactory id=e2bdfa71-1371-3d68-84e3-6477a3b985ad
+[2m2019-03-06 16:31:20.044[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor [    <init>:154 ][0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2019-03-06 16:31:20.173[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mtrationDelegate$BeanPostProcessorChecker [ialization:328 ][0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$23581358] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2019-03-06 16:31:20.563[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.e.t.TomcatWebServer              [initialize:91  ][0;39m [2m:[0;39m Tomcat initialized with port(s): 8001 (http)
+[2m2019-03-06 16:31:20.590[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.h.Http11NioProtocol                [       log:180 ][0;39m [2m:[0;39m Initializing ProtocolHandler ["http-nio-8001"]
+[2m2019-03-06 16:31:20.610[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.StandardService                  [       log:180 ][0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2019-03-06 16:31:20.611[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.StandardEngine                   [       log:180 ][0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.5.29
+[2m2019-03-06 16:31:20.628[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.AprLifecycleListener             [       log:180 ][0;39m [2m:[0;39m The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/baozc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2m2019-03-06 16:31:20.748[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.C.[.[.[/]                        [       log:180 ][0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2019-03-06 16:31:20.749[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.c.ContextLoader                    [ionContext:285 ][0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1789 ms
+[2m2019-03-06 16:31:20.981[0;39m [33m WARN[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:121 ][0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2019-03-06 16:31:20.982[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:122 ][0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2019-03-06 16:31:20.997[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.DynamicPropertyFactory             [etInstance:281 ][0;39m [2m:[0;39m DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@63f52bd6
+[2m2019-03-06 16:31:22.008[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.ServletRegistrationBean        [gistration:185 ][0;39m [2m:[0;39m Servlet dispatcherServlet mapped to [/]
+[2m2019-03-06 16:31:22.015[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2019-03-06 16:31:22.016[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2019-03-06 16:31:22.017[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2019-03-06 16:31:22.017[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2019-03-06 16:31:22.018[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'httpTraceFilter' to: [/*]
+[2m2019-03-06 16:31:22.019[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'webMvcMetricsFilter' to: [/*]
+[2m2019-03-06 16:31:22.119[0;39m [33m WARN[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mConfigServletWebServerApplicationContext [   refresh:558 ][0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloEndpoint': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'eureka.url' in value "${eureka.url}"
+[2m2019-03-06 16:31:22.123[0;39m [33m WARN[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.f.s.DisposableBeanAdapter          [troyMethod:347 ][0;39m [2m:[0;39m Invocation of destroy method 'close' failed on bean with name 'eurekaRegistration': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+[2m2019-03-06 16:31:22.127[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.StandardService                  [       log:180 ][0;39m [2m:[0;39m Stopping service [Tomcat]
+[2m2019-03-06 16:31:22.159[0;39m [32m INFO[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mConditionEvaluationReportLoggingListener [tionReport:101 ][0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2m2019-03-06 16:31:22.161[0;39m [31mERROR[0;39m [35m60823[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.SpringApplication                  [ortFailure:842 ][0;39m [2m:[0;39m Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloEndpoint': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'eureka.url' in value "${eureka.url}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:379) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at com.client.EurekaClientApplication.main(EurekaClientApplication.java:15) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'eureka.url' in value "${eureka.url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:839) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1086) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 17 more
+
+[2m2019-03-06 16:34:25.856[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.c.EurekaClientApplication              [rofileInfo:659 ][0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2019-03-06 16:34:25.908[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mConfigServletWebServerApplicationContext [areRefresh:590 ][0;39m [2m:[0;39m Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@58fb7731: startup date [Wed Mar 06 16:34:25 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5403f35f
+[2m2019-03-06 16:34:27.063[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.c.s.GenericScope                   [lizationId:294 ][0;39m [2m:[0;39m BeanFactory id=e2bdfa71-1371-3d68-84e3-6477a3b985ad
+[2m2019-03-06 16:34:27.085[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor [    <init>:154 ][0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2019-03-06 16:34:27.228[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mtrationDelegate$BeanPostProcessorChecker [ialization:328 ][0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e929f2f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2019-03-06 16:34:27.629[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.e.t.TomcatWebServer              [initialize:91  ][0;39m [2m:[0;39m Tomcat initialized with port(s): 8001 (http)
+[2m2019-03-06 16:34:27.659[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.h.Http11NioProtocol                [       log:180 ][0;39m [2m:[0;39m Initializing ProtocolHandler ["http-nio-8001"]
+[2m2019-03-06 16:34:27.685[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.StandardService                  [       log:180 ][0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2019-03-06 16:34:27.686[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.StandardEngine                   [       log:180 ][0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.5.29
+[2m2019-03-06 16:34:27.703[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.AprLifecycleListener             [       log:180 ][0;39m [2m:[0;39m The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/baozc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2m2019-03-06 16:34:27.855[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.C.[.[.[/]                        [       log:180 ][0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2019-03-06 16:34:27.857[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.c.ContextLoader                    [ionContext:285 ][0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1949 ms
+[2m2019-03-06 16:34:28.116[0;39m [33m WARN[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:121 ][0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2019-03-06 16:34:28.116[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:122 ][0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2019-03-06 16:34:28.133[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.DynamicPropertyFactory             [etInstance:281 ][0;39m [2m:[0;39m DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@a524baf
+[2m2019-03-06 16:34:28.996[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.ServletRegistrationBean        [gistration:185 ][0;39m [2m:[0;39m Servlet dispatcherServlet mapped to [/]
+[2m2019-03-06 16:34:29.015[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2019-03-06 16:34:29.016[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2019-03-06 16:34:29.016[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2019-03-06 16:34:29.017[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2019-03-06 16:34:29.017[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'httpTraceFilter' to: [/*]
+[2m2019-03-06 16:34:29.017[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'webMvcMetricsFilter' to: [/*]
+[2m2019-03-06 16:34:29.112[0;39m [33m WARN[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:121 ][0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2019-03-06 16:34:29.113[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:122 ][0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2019-03-06 16:34:29.197[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.h.SimpleUrlHandlerMapping        [terHandler:373 ][0;39m [2m:[0;39m Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2019-03-06 16:34:29.392[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerAdapter [dviceCache:574 ][0;39m [2m:[0;39m Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@58fb7731: startup date [Wed Mar 06 16:34:25 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5403f35f
+[2m2019-03-06 16:34:29.481[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/hello],methods=[GET]}" onto public java.lang.String com.client.HelloEndpoint.hello()
+[2m2019-03-06 16:34:29.484[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2m2019-03-06 16:34:29.486[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2m2019-03-06 16:34:29.528[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.h.SimpleUrlHandlerMapping        [terHandler:373 ][0;39m [2m:[0;39m Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2019-03-06 16:34:29.528[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.h.SimpleUrlHandlerMapping        [terHandler:373 ][0;39m [2m:[0;39m Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2019-03-06 16:34:30.051[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.a.e.w.EndpointLinksResolver        [    <init>:59  ][0;39m [2m:[0;39m Exposing 2 endpoint(s) beneath base path '/actuator'
+[2m2019-03-06 16:34:30.062[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.b.a.e.w.s.WebMvcEndpointHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+[2m2019-03-06 16:34:30.063[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.b.a.e.w.s.WebMvcEndpointHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+[2m2019-03-06 16:34:30.064[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.b.a.e.w.s.WebMvcEndpointHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2m2019-03-06 16:34:30.123[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [stantiated:433 ][0;39m [2m:[0;39m Registering beans for JMX exposure on startup
+[2m2019-03-06 16:34:30.133[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [autodetect:895 ][0;39m [2m:[0;39m Bean with name 'environmentManager' has been autodetected for JMX exposure
+[2m2019-03-06 16:34:30.135[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [autodetect:895 ][0;39m [2m:[0;39m Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+[2m2019-03-06 16:34:30.136[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [autodetect:895 ][0;39m [2m:[0;39m Bean with name 'refreshScope' has been autodetected for JMX exposure
+[2m2019-03-06 16:34:30.140[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [anInstance:675 ][0;39m [2m:[0;39m Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+[2m2019-03-06 16:34:30.151[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [anInstance:675 ][0;39m [2m:[0;39m Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+[2m2019-03-06 16:34:30.163[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [anInstance:675 ][0;39m [2m:[0;39m Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=58fb7731,type=ConfigurationPropertiesRebinder]
+[2m2019-03-06 16:34:30.185[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.s.DefaultLifecycleProcessor        [     start:351 ][0;39m [2m:[0;39m Starting beans in phase 0
+[2m2019-03-06 16:34:30.197[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.n.e.InstanceInfoFactory            [    create:71  ][0;39m [2m:[0;39m Setting initial instance status as: STARTING
+[2m2019-03-06 16:34:30.272[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [    <init>:349 ][0;39m [2m:[0;39m Initializing Eureka in region us-east-1
+[2m2019-03-06 16:34:30.282[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.r.a.ConfigClusterResolver        [rEndpoints:43  ][0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2019-03-06 16:34:30.328[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:958 ][0;39m [2m:[0;39m Disable delta property : false
+[2m2019-03-06 16:34:30.329[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:959 ][0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2019-03-06 16:34:30.330[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:960 ][0;39m [2m:[0;39m Force full registry fetch : false
+[2m2019-03-06 16:34:30.330[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:961 ][0;39m [2m:[0;39m Application is null : false
+[2m2019-03-06 16:34:30.331[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:962 ][0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2019-03-06 16:34:30.331[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:964 ][0;39m [2m:[0;39m Application version is -1: true
+[2m2019-03-06 16:34:30.332[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [llRegistry:1047][0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2019-03-06 16:34:30.627[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [llRegistry:1056][0;39m [2m:[0;39m The response status is 200
+[2m2019-03-06 16:34:30.631[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [duledTasks:1264][0;39m [2m:[0;39m Starting heartbeat executor: renew interval is: 30
+[2m2019-03-06 16:34:30.635[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.InstanceInfoReplicator             [    <init>:60  ][0;39m [2m:[0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2m2019-03-06 16:34:30.642[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [    <init>:449 ][0;39m [2m:[0;39m Discovery Client initialized at timestamp 1551861270640 with initial instances count: 1
+[2m2019-03-06 16:34:30.647[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.n.e.s.EurekaServiceRegistry        [  register:42  ][0;39m [2m:[0;39m Registering application eureka-client1 with eureka with status UP
+[2m2019-03-06 16:34:30.649[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [    notify:1299][0;39m [2m:[0;39m Saw local status change event StatusChangeEvent [timestamp=1551861270649, current=UP, previous=STARTING]
+[2m2019-03-06 16:34:30.653[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  register:826 ][0;39m [2m:[0;39m DiscoveryClient_EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001: registering service...
+[2m2019-03-06 16:34:30.709[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.h.Http11NioProtocol                [       log:180 ][0;39m [2m:[0;39m Starting ProtocolHandler ["http-nio-8001"]
+[2m2019-03-06 16:34:30.765[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.t.u.n.NioSelectorPool                [       log:180 ][0;39m [2m:[0;39m Using a shared selector for servlet write/read
+[2m2019-03-06 16:34:30.831[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.e.t.TomcatWebServer              [     start:206 ][0;39m [2m:[0;39m Tomcat started on port(s): 8001 (http) with context path ''
+[2m2019-03-06 16:34:30.834[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36m.s.c.n.e.s.EurekaAutoServiceRegistration [ationEvent:124 ][0;39m [2m:[0;39m Updating port to 8001
+[2m2019-03-06 16:34:30.865[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.c.EurekaClientApplication              [logStarted:59  ][0;39m [2m:[0;39m Started EurekaClientApplication in 6.332 seconds (JVM running for 7.236)
+[2m2019-03-06 16:34:30.892[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  register:835 ][0;39m [2m:[0;39m DiscoveryClient_EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001 - registration status: 204
+[2m2019-03-06 16:34:37.297[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.C.[.[.[/]                        [       log:180 ][0;39m [2m:[0;39m Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2m2019-03-06 16:34:37.298[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.DispatcherServlet                [ervletBean:494 ][0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization started
+[2m2019-03-06 16:34:37.360[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.DispatcherServlet                [ervletBean:509 ][0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization completed in 61 ms
+[2m2019-03-06 16:34:37.484[0;39m [31mERROR[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]      [       log:182 ][0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'info.app.defaultzone' to java.lang.Object] with root cause
+
+java.lang.IllegalArgumentException: Could not resolve placeholder 'eureka.client.serviceUrl.defaultZone' in value "${eureka.client.serviceUrl.defaultZone}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.context.properties.bind.PropertySourcesPlaceholdersResolver.resolvePlaceholders(PropertySourcesPlaceholdersResolver.java:60) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindProperty(Binder.java:323) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:267) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:221) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$0(Binder.java:301) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withSource(Binder.java:413) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$900(Binder.java:382) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$1(Binder.java:303) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateElementBinder.bind(AggregateElementBinder.java:39) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder$EntryBinder.lambda$bindEntries$0(MapBinder.java:139) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at java.util.HashMap.computeIfAbsent(HashMap.java:1127) ~[?:1.8.0_171]
+	at org.springframework.boot.context.properties.bind.MapBinder$EntryBinder.bindEntries(MapBinder.java:138) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:72) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:58) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:306) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:442) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:382) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:305) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:263) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:221) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$0(Binder.java:301) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withSource(Binder.java:413) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$900(Binder.java:382) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$1(Binder.java:303) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateElementBinder.bind(AggregateElementBinder.java:39) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder$EntryBinder.lambda$bindEntries$0(MapBinder.java:139) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at java.util.HashMap.computeIfAbsent(HashMap.java:1127) ~[?:1.8.0_171]
+	at org.springframework.boot.context.properties.bind.MapBinder$EntryBinder.bindEntries(MapBinder.java:138) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:72) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:58) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:306) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:442) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:382) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:305) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:263) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:221) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:210) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:166) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.actuate.info.EnvironmentInfoContributor.contribute(EnvironmentInfoContributor.java:47) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.actuate.info.InfoEndpoint.info(InfoEndpoint.java:52) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:223) ~[spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:76) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:61) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:243) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:299) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:158) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:126) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:111) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:84) ~[spring-boot-actuator-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.29.jar:8.5.29]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_171]
+
+[2m2019-03-06 16:36:18.122[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mConfigServletWebServerApplicationContext [   doClose:993 ][0;39m [2m:[0;39m Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@58fb7731: startup date [Wed Mar 06 16:34:25 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5403f35f
+[2m2019-03-06 16:36:18.137[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.n.e.s.EurekaServiceRegistry        [deregister:65  ][0;39m [2m:[0;39m Unregistering application eureka-client1 with eureka with status DOWN
+[2m2019-03-06 16:36:18.158[0;39m [33m WARN[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [    notify:1297][0;39m [2m:[0;39m Saw local status change event StatusChangeEvent [timestamp=1551861378155, current=DOWN, previous=UP]
+[2m2019-03-06 16:36:18.236[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  register:826 ][0;39m [2m:[0;39m DiscoveryClient_EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001: registering service...
+[2m2019-03-06 16:36:18.491[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.s.DefaultLifecycleProcessor        [      stop:366 ][0;39m [2m:[0;39m Stopping beans in phase 0
+[2m2019-03-06 16:36:18.557[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  register:835 ][0;39m [2m:[0;39m DiscoveryClient_EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001 - registration status: 204
+[2m2019-03-06 16:36:18.564[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [   destroy:451 ][0;39m [2m:[0;39m Unregistering JMX-exposed beans on shutdown
+[2m2019-03-06 16:36:18.584[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [isterBeans:183 ][0;39m [2m:[0;39m Unregistering JMX-exposed beans
+[2m2019-03-06 16:36:18.763[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  shutdown:888 ][0;39m [2m:[0;39m Shutting down DiscoveryClient ...
+[2m2019-03-06 16:36:21.768[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [unregister:922 ][0;39m [2m:[0;39m Unregistering ...
+[2m2019-03-06 16:36:21.780[0;39m [31mERROR[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.t.d.RedirectingEurekaHttpClient  [   execute:91  ][0;39m [2m:[0;39m Request execution error
+
+org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8080/eureka/apps/EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:741) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:684) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:600) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:83) ~[spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:923) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:901) [eureka-client-1.9.2.jar:1.9.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:223) [spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:494) [spring-cloud-context-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) [spring-aop-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at com.sun.proxy.$Proxy107.shutdown(Unknown Source) [?:?]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.close(EurekaRegistration.java:207) [spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:577) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:549) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:510) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_171]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:698) ~[?:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1587) ~[?:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[?:1.8.0_171]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[?:1.8.0_171]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:82) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:727) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 38 more
+
+[2m2019-03-06 16:36:21.788[0;39m [33m WARN[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.t.d.RetryableEurekaHttpClient    [   execute:130 ][0;39m [2m:[0;39m Request execution failed with message: I/O error on DELETE request for "http://localhost:8080/eureka/apps/EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+[2m2019-03-06 16:36:21.824[0;39m [31mERROR[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.t.d.RedirectingEurekaHttpClient  [   execute:83  ][0;39m [2m:[0;39m Request execution error
+
+org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8080/eureka/apps/EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:741) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:684) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:600) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:83) ~[spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:923) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:901) [eureka-client-1.9.2.jar:1.9.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:223) [spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:494) [spring-cloud-context-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) [spring-aop-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at com.sun.proxy.$Proxy107.shutdown(Unknown Source) [?:?]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.close(EurekaRegistration.java:207) [spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:577) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:549) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:510) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_171]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[?:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[?:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[?:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[?:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[?:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[?:1.8.0_171]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:727) ~[spring-web-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 39 more
+
+[2m2019-03-06 16:36:21.832[0;39m [33m WARN[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.t.d.RetryableEurekaHttpClient    [   execute:130 ][0;39m [2m:[0;39m Request execution failed with message: I/O error on DELETE request for "http://localhost:8080/eureka/apps/EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+[2m2019-03-06 16:36:21.834[0;39m [31mERROR[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [unregister:926 ][0;39m [2m:[0;39m DiscoveryClient_EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:923) [eureka-client-1.9.2.jar:1.9.2]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:901) [eureka-client-1.9.2.jar:1.9.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:223) [spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:494) [spring-cloud-context-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) [spring-aop-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at com.sun.proxy.$Proxy107.shutdown(Unknown Source) [?:?]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.close(EurekaRegistration.java:207) [spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:577) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:549) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:510) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+
+[2m2019-03-06 16:36:21.843[0;39m [32m INFO[0;39m [35m61466[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  shutdown:911 ][0;39m [2m:[0;39m Completed shut down of DiscoveryClient
+[2m2019-03-06 16:36:54.669[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.c.EurekaClientApplication              [rofileInfo:659 ][0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2019-03-06 16:36:54.730[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mConfigServletWebServerApplicationContext [areRefresh:590 ][0;39m [2m:[0;39m Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c055c54: startup date [Wed Mar 06 16:36:54 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2fd1433e
+[2m2019-03-06 16:36:57.102[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.c.s.GenericScope                   [lizationId:294 ][0;39m [2m:[0;39m BeanFactory id=e2bdfa71-1371-3d68-84e3-6477a3b985ad
+[2m2019-03-06 16:36:57.317[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor [    <init>:154 ][0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2019-03-06 16:36:57.852[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mtrationDelegate$BeanPostProcessorChecker [ialization:328 ][0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5426e9a2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2019-03-06 16:36:58.774[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.e.t.TomcatWebServer              [initialize:91  ][0;39m [2m:[0;39m Tomcat initialized with port(s): 8001 (http)
+[2m2019-03-06 16:36:58.865[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.h.Http11NioProtocol                [       log:180 ][0;39m [2m:[0;39m Initializing ProtocolHandler ["http-nio-8001"]
+[2m2019-03-06 16:36:58.938[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.StandardService                  [       log:180 ][0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2019-03-06 16:36:58.939[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.StandardEngine                   [       log:180 ][0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.5.29
+[2m2019-03-06 16:36:58.961[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.AprLifecycleListener             [       log:180 ][0;39m [2m:[0;39m The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/baozc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2m2019-03-06 16:36:59.169[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.C.[.[.[/]                        [       log:180 ][0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2019-03-06 16:36:59.170[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.c.ContextLoader                    [ionContext:285 ][0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 4440 ms
+[2m2019-03-06 16:36:59.783[0;39m [33m WARN[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:121 ][0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2019-03-06 16:36:59.784[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:122 ][0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2019-03-06 16:36:59.840[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.DynamicPropertyFactory             [etInstance:281 ][0;39m [2m:[0;39m DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@73c962ac
+[2m2019-03-06 16:37:02.224[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.ServletRegistrationBean        [gistration:185 ][0;39m [2m:[0;39m Servlet dispatcherServlet mapped to [/]
+[2m2019-03-06 16:37:02.230[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2019-03-06 16:37:02.231[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2019-03-06 16:37:02.231[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2019-03-06 16:37:02.231[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2019-03-06 16:37:02.232[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'httpTraceFilter' to: [/*]
+[2m2019-03-06 16:37:02.232[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.s.FilterRegistrationBean         [ configure:244 ][0;39m [2m:[0;39m Mapping filter: 'webMvcMetricsFilter' to: [/*]
+[2m2019-03-06 16:37:02.407[0;39m [33m WARN[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:121 ][0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2019-03-06 16:37:02.408[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.c.s.URLConfigurationSource           [    <init>:122 ][0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2019-03-06 16:37:02.539[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.h.SimpleUrlHandlerMapping        [terHandler:373 ][0;39m [2m:[0;39m Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2019-03-06 16:37:03.173[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerAdapter [dviceCache:574 ][0;39m [2m:[0;39m Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c055c54: startup date [Wed Mar 06 16:36:54 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2fd1433e
+[2m2019-03-06 16:37:03.338[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/hello],methods=[GET]}" onto public java.lang.String com.client.HelloEndpoint.hello()
+[2m2019-03-06 16:37:03.342[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2m2019-03-06 16:37:03.346[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2m2019-03-06 16:37:03.416[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.h.SimpleUrlHandlerMapping        [terHandler:373 ][0;39m [2m:[0;39m Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2019-03-06 16:37:03.417[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.h.SimpleUrlHandlerMapping        [terHandler:373 ][0;39m [2m:[0;39m Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2019-03-06 16:37:04.349[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.a.e.w.EndpointLinksResolver        [    <init>:59  ][0;39m [2m:[0;39m Exposing 2 endpoint(s) beneath base path '/actuator'
+[2m2019-03-06 16:37:04.418[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.b.a.e.w.s.WebMvcEndpointHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+[2m2019-03-06 16:37:04.422[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.b.a.e.w.s.WebMvcEndpointHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+[2m2019-03-06 16:37:04.424[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36ms.b.a.e.w.s.WebMvcEndpointHandlerMapping [  register:547 ][0;39m [2m:[0;39m Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2m2019-03-06 16:37:04.613[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [stantiated:433 ][0;39m [2m:[0;39m Registering beans for JMX exposure on startup
+[2m2019-03-06 16:37:04.766[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [autodetect:895 ][0;39m [2m:[0;39m Bean with name 'environmentManager' has been autodetected for JMX exposure
+[2m2019-03-06 16:37:04.770[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [autodetect:895 ][0;39m [2m:[0;39m Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+[2m2019-03-06 16:37:04.773[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [autodetect:895 ][0;39m [2m:[0;39m Bean with name 'refreshScope' has been autodetected for JMX exposure
+[2m2019-03-06 16:37:04.801[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [anInstance:675 ][0;39m [2m:[0;39m Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+[2m2019-03-06 16:37:04.885[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [anInstance:675 ][0;39m [2m:[0;39m Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+[2m2019-03-06 16:37:04.927[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter        [anInstance:675 ][0;39m [2m:[0;39m Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=c055c54,type=ConfigurationPropertiesRebinder]
+[2m2019-03-06 16:37:04.979[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.s.DefaultLifecycleProcessor        [     start:351 ][0;39m [2m:[0;39m Starting beans in phase 0
+[2m2019-03-06 16:37:04.992[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.n.e.InstanceInfoFactory            [    create:71  ][0;39m [2m:[0;39m Setting initial instance status as: STARTING
+[2m2019-03-06 16:37:05.104[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [    <init>:349 ][0;39m [2m:[0;39m Initializing Eureka in region us-east-1
+[2m2019-03-06 16:37:05.118[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.r.a.ConfigClusterResolver        [rEndpoints:43  ][0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2019-03-06 16:37:05.310[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:958 ][0;39m [2m:[0;39m Disable delta property : false
+[2m2019-03-06 16:37:05.314[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:959 ][0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2019-03-06 16:37:05.315[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:960 ][0;39m [2m:[0;39m Force full registry fetch : false
+[2m2019-03-06 16:37:05.315[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:961 ][0;39m [2m:[0;39m Application is null : false
+[2m2019-03-06 16:37:05.316[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:962 ][0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2019-03-06 16:37:05.316[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:964 ][0;39m [2m:[0;39m Application version is -1: true
+[2m2019-03-06 16:37:05.316[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [llRegistry:1047][0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2019-03-06 16:37:07.521[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [llRegistry:1056][0;39m [2m:[0;39m The response status is 200
+[2m2019-03-06 16:37:07.533[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [duledTasks:1264][0;39m [2m:[0;39m Starting heartbeat executor: renew interval is: 30
+[2m2019-03-06 16:37:07.545[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.InstanceInfoReplicator             [    <init>:60  ][0;39m [2m:[0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2m2019-03-06 16:37:07.642[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [    <init>:449 ][0;39m [2m:[0;39m Discovery Client initialized at timestamp 1551861427639 with initial instances count: 0
+[2m2019-03-06 16:37:07.846[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.c.n.e.s.EurekaServiceRegistry        [  register:42  ][0;39m [2m:[0;39m Registering application eureka-client1 with eureka with status UP
+[2m2019-03-06 16:37:07.848[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [    notify:1299][0;39m [2m:[0;39m Saw local status change event StatusChangeEvent [timestamp=1551861427848, current=UP, previous=STARTING]
+[2m2019-03-06 16:37:07.852[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  register:826 ][0;39m [2m:[0;39m DiscoveryClient_EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001: registering service...
+[2m2019-03-06 16:37:07.993[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.h.Http11NioProtocol                [       log:180 ][0;39m [2m:[0;39m Starting ProtocolHandler ["http-nio-8001"]
+[2m2019-03-06 16:37:08.133[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.t.u.n.NioSelectorPool                [       log:180 ][0;39m [2m:[0;39m Using a shared selector for servlet write/read
+[2m2019-03-06 16:37:08.172[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.b.w.e.t.TomcatWebServer              [     start:206 ][0;39m [2m:[0;39m Tomcat started on port(s): 8001 (http) with context path ''
+[2m2019-03-06 16:37:08.175[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36m.s.c.n.e.s.EurekaAutoServiceRegistration [ationEvent:124 ][0;39m [2m:[0;39m Updating port to 8001
+[2m2019-03-06 16:37:08.194[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.c.EurekaClientApplication              [logStarted:59  ][0;39m [2m:[0;39m Started EurekaClientApplication in 17.264 seconds (JVM running for 20.706)
+[2m2019-03-06 16:37:08.457[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [  register:835 ][0;39m [2m:[0;39m DiscoveryClient_EUREKA-CLIENT1/192.168.26.97:eureka-client1:8001 - registration status: 204
+[2m2019-03-06 16:37:30.969[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.a.c.c.C.[.[.[/]                        [       log:180 ][0;39m [2m:[0;39m Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2m2019-03-06 16:37:30.974[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.DispatcherServlet                [ervletBean:494 ][0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization started
+[2m2019-03-06 16:37:31.064[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mo.s.w.s.DispatcherServlet                [ervletBean:509 ][0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization completed in 89 ms
+[2m2019-03-06 16:37:37.540[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:958 ][0;39m [2m:[0;39m Disable delta property : false
+[2m2019-03-06 16:37:37.541[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:959 ][0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2019-03-06 16:37:37.543[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:960 ][0;39m [2m:[0;39m Force full registry fetch : false
+[2m2019-03-06 16:37:37.543[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:961 ][0;39m [2m:[0;39m Application is null : false
+[2m2019-03-06 16:37:37.544[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:962 ][0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2019-03-06 16:37:37.544[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [chRegistry:964 ][0;39m [2m:[0;39m Application version is -1: false
+[2m2019-03-06 16:37:37.544[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [llRegistry:1047][0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2019-03-06 16:37:37.597[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.DiscoveryClient                    [llRegistry:1056][0;39m [2m:[0;39m The response status is 200
+[2m2019-03-06 16:42:05.340[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.r.a.ConfigClusterResolver        [rEndpoints:43  ][0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2019-03-06 16:47:05.354[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.r.a.ConfigClusterResolver        [rEndpoints:43  ][0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2019-03-06 16:52:05.383[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.r.a.ConfigClusterResolver        [rEndpoints:43  ][0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2019-03-06 16:57:05.440[0;39m [32m INFO[0;39m [35m62295[0;39m [2m---[0;39m [2m[.15t][0;39m [36mc.n.d.s.r.a.ConfigClusterResolver        [rEndpoints:43  ][0;39m [2m:[0;39m Resolving eureka endpoints via configuration

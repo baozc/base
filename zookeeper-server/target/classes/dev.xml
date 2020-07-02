@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<!DOCTYPE xml> 
+<configuration status="error">
+
+    <Properties>
+        <Property name="infoPath">logs</Property>
+        <Property name="infoName">server</Property>
+        <property name="CONSOLE_LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[.15t]}{faint} %clr{%-40.40c{1.} [%10.10M:%-4L]}{cyan} %clr{:}{faint} %m%n%xwEx</property>
+    </Properties>
+    <appenders>  
+        <Console name="Console" target="SYSTEM_OUT">  
+<!--             <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>  TRACE -->
+            <PatternLayout pattern="${CONSOLE_LOG_PATTERN}"/>
+        </Console>  
+
+        <RollingFile name="log" fileName="${infoPath}/${infoName}.log"
+                     filePattern="logs/$${date:yyyy-MM-dd}/info-%d{yyyy-MM-dd HH}-%i.log"
+        >
+            <PatternLayout pattern="${CONSOLE_LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <!--<SizeBasedTriggeringPolicy size="10MB"/>-->
+            </Policies>
+        </RollingFile>
+
+    </appenders>  
+
+    <loggers>  
+        <root level="info" >  
+            <appender-ref ref="Console"/>  
+            <appender-ref ref="log"/>  
+        </root>  
+
+    </loggers>  
+</configuration>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        类加载机制 &middot; baozc title
+    </title>
+
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1"  />
+
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge"  />
+
+    <meta http-equiv="content-type"  content="text/html; charset=utf-8"  />
+
+    <meta name="google-site-verification"  content="YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk"  />
+
+    <meta name="baidu-site-verification"  content="bEFDJ1LvXb"  />
+
+    <meta name="yandex-verification"  content="52253e02830b443c"  />
+
+    <link rel="profile"  href="//gmpg.org/xfn/11"  />
+
+    <link rel="alternate"  href="/atom.xml"  title="RSS"  type="application/rss+xml"  />
+
+    <link rel="apple-touch-icon-precomposed"  href="//www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144"  />
+
+    <link rel="shortcut icon"  href="//www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32"  />
+
+    <link rel="stylesheet"  href="/public/css/poole.css"  />
+
+    <link rel="stylesheet"  href="//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/syntax.css"  />
+
+    <link rel="stylesheet"  href="//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/lanyon.css"  />
+
+    <link rel="stylesheet"  href="/public/css/wu-kan.css"  />
+
+    <link rel="stylesheet"  href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css"  />
+
+</head>
+
+<body
+        class="theme-base-0d sidebar-overlay">
+
+<script  src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" >
+</script>
+
+<script  size="90"  alpha="0.6"  zIndex="-1"  src="//cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js" >
+</script>
+
+<script  color="0,0,0"  pointColor="0,0,0"  opacity="1"  count="31"  zIndex="-1"  src="//cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js" >
+</script>
+
+<script  src="//cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js" >
+</script>
+
+<script  src="/public/js/mermaid.js"  js="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"  stylesheet="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"  markdown_expand="true" >
+</script>
+
+<script  src="/public/js/prism.js" >
+</script>
+
+<script  src="/public/js/katex.js"  js="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js"  auto_render="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"  stylesheet="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"  delimiters="true" >
+</script>
+
+<script  src="/public/js/baidu_push.js" >
+</script>
+
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+   styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar" style="text-align: center">
+    <div class="sidebar-item">
+
+        <div class="ih-item circle effect right_to_left">
+            <a class="blog-button" title="baozc">
+                <img class="img" src="//www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600" alt="img" />
+                <small class="info info-back">
+                    <br/>SYSU17级在读<br/>计科超算方向<br/>永远喜欢水野爱<br/>田宫例四驱车<br/>ASC
+                </small>
+            </a>
+        </div>
+
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>
+        <div class="sidebar-social">
+
+            <a href="/atom.xml" title="rss">
+                <i class="fas fa-rss fa-fw"></i>
+            </a>
+
+            <a href="mailto:wu.kan@foxmail.com" title="wu.kan@foxmail.com">
+                <i class="fas fa-envelope fa-fw"></i>
+            </a>
+
+            <a href="//codeforces.com/profile/WuK" title="WuK">
+                <i class="fas fa-chart-bar fw"></i>
+            </a>
+
+            <a href="//vjudge.net/user/WuK" title="WuK">
+                <i class="fas fa-smile fa-fw"></i>
+            </a>
+
+            <a href="" title="942759535">
+                <i class="fab fa-qq fa-fw"></i>
+            </a>
+
+            <a href="" title="Wu-_-Kan">
+                <i class="fab fa-weixin fa-fw"></i>
+            </a>
+
+            <a href="//github.com/wu-kan" title="github">
+                <i class="fab fa-github fa-fw"></i>
+            </a>
+
+            <a href="//www.zhihu.com/people/wu.kan/activities" title="zhihu">
+                <i class="fab fa-zhihu fa-fw"></i>
+            </a>
+
+        </div>
+    </div>
+    <nav class="sidebar-nav">
+
+        <a class="sidebar-nav-item" href="/">
+            <i class="fas fa-home fa-fw"></i> 首页
+        </a>
+
+        <a class="sidebar-nav-item" href="/about">
+            <i class="fab fa-readme fa-fw"></i> 关于
+        </a>
+
+        <a class="sidebar-nav-item" href="/comments">
+            <i class="fas fa-comments fa-fw"></i> 留言
+        </a>
+
+        <a class="sidebar-nav-item" href="/tags">
+            <i class="fas fa-tags fa-fw"></i> 标签
+        </a>
+
+        <a class="sidebar-nav-item" href="/archive">
+            <i class="fas fa-archive fa-fw"></i> 归档
+        </a>
+
+    </nav>
+    <div class="sidebar-item">
+
+        <div>
+            <script src="/public/simple-jekyll-search/autoloader.js"></script>
+        </div>
+
+
+        <div>
+            <script src="/public/js/jekyll_table_of_contents.js"></script>
+        </div>
+
+
+        <div>
+            <script src="/public/js/run_time.js"></script>
+        </div>
+
+
+        <div>
+            <i class="fas fa-eye fa-fw"></i>
+            <span id="busuanzi_value_page_pv"></span>次
+        </div>
+        <div>
+            <i class="fas fa-paw fa-fw"></i>
+            <span id="busuanzi_value_site_pv"></span>枚
+        </div>
+        <div>
+            <i class="fas fa-user-friends fa-fw"></i>
+            <span id="busuanzi_value_site_uv"></span>人
+        </div>
+        <script src="//cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js"></script>
+
+
+        <div>
+            <i class="fas fa-user-edit fa-fw"></i>
+            2019-12-02 00:33:35
+        </div>
+
+
+        <div>
+            <i class="fas fa-copyright fa-fw"></i>
+            2019
+            baozc
+            <script async defer src="https://buttons.github.io/buttons.js"></script><a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a>
+        </div>
+
+    </div>
+</div>
+<!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+       content to avoid any CSS collisions with our real content. -->
+<div class="wrap"  style="margin:auto;">
+    <h1 class="masthead masthead-title">
+        <div class="container" style="margin:auto;">
+            类加载机制
+        </div>
+    </h1>
+    <!--<div class="container content">-->
+    <div class="content"  style="width: 967px;margin:auto;">
+        <div class="post">
+
+            <small class="post-date">
+
+                <i class="fas fa-calendar-day"></i>
+                12 Oct 2019
+
+
+                <i class="fas fa-file-word"></i>
+                987字
+
+
+                <i class="fas fa-coffee"></i>
+                4分
+
+
+                <span id="/java/jvm/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6" class="leancloud-visitors" data-flag-title="类加载机制">
+      <i class="far fa-eye"></i>
+      <span class="leancloud-visitors-count"></span>次
+    </span>
+
+
+                <i class="fas fa-tag"></i>
+                jvm
+
+
+
+                <i class="fas fa-tag"></i>
+                jvm
+
+                </br>
+
+            </small>
+
+
+            <div class="post-content" style="width: 967px; margin:auto;">
+                <blockquote>
+                    <p>加载、验证、准备、解析、初始化、使用、卸载</p>
+                </blockquote>
+
+                <p><strong>加载、验证、准备、初始化顺序是固定的，解析则不一定</strong>
+                    连接：验证、准备、解析</p>
+                <h1 id="加载">加载</h1>
+                <p>加载什么时候执行，没有强制约束</p>
+
+                <ul>
+                    <li>
+                        <p>在类加载阶段，虚拟机要完成以下3件事情：</p>
+
+                        <ol>
+                            <li>通过一个类的全限定名来获取定义此类的二进制字节流
+                                <ul>
+                                    <li><code class="highlighter-rouge">Class.forName</code> or <code class="highlighter-rouge">ClassLoader.getSystemClassLoader().loadClass</code></li>
+                                    <li>从zip包读取：JAR EAR WAR格式</li>
+                                    <li>网络中获取</li>
+                                    <li>运行时计算生成：动态代理</li>
+                                    <li>由其它文件生成</li>
+                                </ul>
+                            </li>
+                            <li>将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构</li>
+                            <li>在内存中生成一个代表这个类的java.lang.Class对象，作为方法区这个类的各种数据的访问入口</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <p>加载阶段与连接阶段的部分内容（如一部分字节码文件格式验证动作）是交叉进行的，加载阶段尚未完成，连接阶段可能已经开始，但这些夹在加载阶段之中进行的动作，仍然属于连接阶段的内容，这两个阶段的开始时间仍然保持着固定的先后顺序</p>
+
+                <h1 id="验证">验证</h1>
+                <p>验证是连接阶段的第一步，这一阶段的目的是为了确保Class文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全</p>
+
+                <ul>
+                    <li>
+                        <p>验证阶段大致上会完成下面4个阶段的验证动作</p>
+
+                        <ol>
+                            <li>文件格式验证
+                                <ul>
+                                    <li>是否以魔数0xCAFEBABE开头</li>
+                                </ul>
+                            </li>
+                            <li>元数据验证
+                                -</li>
+                            <li>字节码验证</li>
+                            <li>符号引用验证</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h1 id="准备">准备</h1>
+                <ul>
+                    <li>准备阶段是正式为为变量分配内存并设置类变量初始值的阶段，这些变量所使用的内存都将在方法区中进行分配
+                        <ul>
+                            <li>内存分配：仅包括类变量（被static修饰的变量），不包括实例变量，实例变量会在实例化时随着对象一起分配在java堆中</li>
+                            <li>初始值：数据类型的零值，<code class="highlighter-rouge">public static int value = 123</code> 0而不是123</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h1 id="解析">解析</h1>
+                <p>解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程</p>
+                <ul>
+                    <li>字段解析</li>
+                </ul>
+
+                <h1 id="初始化">初始化</h1>
+                <p>初始化阶段是执行类构造器<clinit>()方法的过程</clinit></p>
+
+                <h2 id="执行初始化的5种情况">执行初始化的5种情况</h2>
+                <ol>
+                    <li>遇到<code class="highlighter-rouge">new</code>、<code class="highlighter-rouge">getstatic</code>、<code class="highlighter-rouge">putstatic</code>、<code class="highlighter-rouge">invokestatic</code>这4条字节码指令，常见的java代码场景：
+                        <ul>
+                            <li>使用new关键字实例化对象</li>
+                            <li>读取或者设置一个类的静态字段</li>
+                            <li>调用一个类的静态方法</li>
+                        </ul>
+                    </li>
+                    <li>使用java.lang.reflect包的方法对类进行反射调用的时候</li>
+                    <li>当初始化一个类时，发面父类还没有进行过初始化，则需要先触发其父类的初始化</li>
+                    <li>当虚拟机启动时，用户需要指定一个要执行的主类（包含main方法的类），虚拟机会先初始化这个主类</li>
+                    <li>当使用JDK1.7的动态语言支持时</li>
+                </ol>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <!--<script src="/public/js/valine.js"></script>-->
+
+
+    </div>
+</div>
+<div style="text-align: center">
+    <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备19036444号</a>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+
+    <title>webSocket-Test</title>
+    
+	<style type="text/css">
+	    #container-terminal{
+	        width:100%;
+	    }
+	</style>    
+
+    <script type="text/javascript">
+  　　  　　console.warn("test")
+    </script>
+    <script type="text/javascript" src="/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+    <h1>11111111111</h1>
+    <h1>11111111111</h1>
+    <input id="text" type="text" />
+    <button onclick="send()">Send</button>
+    <button onclick="closeWebSocket()">Close</button>
+    <div id="message">
+    </div>
+    <script>
+
+        var userID="888";
+        var websocket=null;
+
+        $(function(){
+            connectWebSocket();
+        })
+
+        //建立WebSocket连接
+        function connectWebSocket(){
+
+            console.log("开始...");
+
+            var uri = "wss://daojiagray.motimall.cn/mais/token=eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTc4OTgyMzYzNTQxLCJtb2JpbGUiOiIxMzUyMjc1NzMzMCIsImV4cCI6MTYxMDUxODM2MywidXNlcklkIjoiNjU2OTQzNDg1NDEyMzk3MDU2In0.fXByHgAqnSafwTfXk2pmeQFRYE1_GAjroAILNlvPpnx08co8iUXlCkrJzb85LUl_Mxu5H8mCXIyR3msDK16RJQ";
+            //建立webSocket连接
+            websocket = new WebSocket(uri);
+            console.log(uri);
+            // websocket = new WebSocket("ws://localhost/mais1/mais/token=eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTc2NTY5NzQ1MjAwLCJtb2JpbGUiOiIxMzUyMjc1NzMzMCIsImV4cCI6MTYwODEwNTc0NSwidXNlcklkIjoiNjU0OTkxMDI0NDYwMDkxMzkyIn0.qIGLUmP7XP2TuYJMLB5tv-OWS3bUHibQp_wEqQmivYWBC0DYGpHfEF7uC0Gq_mccXGqBl0AzAyP-s4CxQ6t3RA");
+            // websocket = new WebSocket("ws://localhost:9104/mais/token=eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTc2NTY5NzQ1MjAwLCJtb2JpbGUiOiIxMzUyMjc1NzMzMCIsImV4cCI6MTYwODEwNTc0NSwidXNlcklkIjoiNjU0OTkxMDI0NDYwMDkxMzkyIn0.qIGLUmP7XP2TuYJMLB5tv-OWS3bUHibQp_wEqQmivYWBC0DYGpHfEF7uC0Gq_mccXGqBl0AzAyP-s4CxQ6t3RA");
+
+            //打开webSokcet连接时，回调该函数
+            websocket.onopen = function () {
+                console.log("onpen");
+                websocket.send("test");
+            }
+
+            //关闭webSocket连接时，回调该函数
+            websocket.onclose = function () {
+                //关闭连接
+                console.log("onclose");
+            }
+
+            //接收信息
+            websocket.onmessage = function (msg) {
+                console.log(msg.data);
+            }
+
+        }
+        //发送消息
+        function send(){
+            var postValue={};
+            postValue.id=userID;
+            postValue.message=$("#text").val();
+            websocket.send(JSON.stringify(postValue));
+        }
+        //关闭连接
+        function closeWebSocket(){
+            if(websocket != null) {
+                websocket.close();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+event/User.class
+event/UserRegisterEvent.class
+event/UserPublish.class

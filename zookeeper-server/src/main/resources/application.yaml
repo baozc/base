@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: server
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+#      discovery:
+#        instance-host: 10.0.0.1
+
+#server:
+#  port: 8082
+logging:
+  config: classpath:dev.xml

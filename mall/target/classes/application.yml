@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mall
+
+#logging:
+#  config: classpath:dev.xml
+
+info:
+  app:
+    name: ${spring.application.name}
+    hostname: ${eureka.instance.hostname}
+    server-hostname: ${server.url}
+    defaultZone: http://${eureka.instance.hostname}:8080/eureka/

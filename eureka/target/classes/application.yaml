@@ -1,0 +1,26 @@
+eureka:
+  instance:
+    hostname: localhost
+#    hostname: 10.254.110.151
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8080/eureka
+  server:
+    enable-self-preservation: false # 关闭自我保护模式
+
+info:
+  app:
+    name: ${spring.application.name}
+    hostname: ${eureka.instance.hostname}
+    defaultZone: http://${eureka.instance.hostname}:8080/eureka
+
+server:
+  port: 8080
+
+#logging:
+#  config: classpath:dev.xml
+spring:
+  application:
+    name: eureka-server

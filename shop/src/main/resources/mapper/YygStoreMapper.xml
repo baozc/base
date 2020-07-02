@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygStoreMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygStore">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="storeName" jdbcType="VARCHAR" property="storename" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="audit" jdbcType="BIT" property="audit" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="photos" jdbcType="VARCHAR" property="photos" />
+    <result column="recommend" jdbcType="BIT" property="recommend" />
+    <result column="weixin" jdbcType="VARCHAR" property="weixin" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="userLogoPath" jdbcType="VARCHAR" property="userlogopath" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="productId" jdbcType="BIGINT" property="productid" />
+    <result column="accountBalance" jdbcType="DECIMAL" property="accountbalance" />
+    <result column="saleScore" jdbcType="VARCHAR" property="salescore" />
+    <result column="score_can_tixian" jdbcType="BIGINT" property="scoreCanTixian" />
+    <result column="score_do_tixian" jdbcType="BIGINT" property="scoreDoTixian" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, storeName, createBy, createById, createTime, deleteStatus, version, audit, mobile, 
+    photos, recommend, weixin, userId, userLogoPath, lastModifyBy, lastModifyById, lastModifyTime, 
+    productId, accountBalance, saleScore, score_can_tixian, score_do_tixian
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from yyg_store
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_store
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygStore">
+    insert into yyg_store (id, storeName, createBy, 
+      createById, createTime, deleteStatus, 
+      version, audit, mobile, 
+      photos, recommend, weixin, 
+      userId, userLogoPath, lastModifyBy, 
+      lastModifyById, lastModifyTime, productId, 
+      accountBalance, saleScore, score_can_tixian, 
+      score_do_tixian)
+    values (#{id,jdbcType=BIGINT}, #{storename,jdbcType=VARCHAR}, #{createby,jdbcType=VARCHAR}, 
+      #{createbyid,jdbcType=BIGINT}, #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, 
+      #{version,jdbcType=BIGINT}, #{audit,jdbcType=BIT}, #{mobile,jdbcType=VARCHAR}, 
+      #{photos,jdbcType=VARCHAR}, #{recommend,jdbcType=BIT}, #{weixin,jdbcType=VARCHAR}, 
+      #{userid,jdbcType=BIGINT}, #{userlogopath,jdbcType=VARCHAR}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{productid,jdbcType=BIGINT}, 
+      #{accountbalance,jdbcType=DECIMAL}, #{salescore,jdbcType=VARCHAR}, #{scoreCanTixian,jdbcType=BIGINT}, 
+      #{scoreDoTixian,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygStore">
+    insert into yyg_store
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="storename != null">
+        storeName,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="audit != null">
+        audit,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="photos != null">
+        photos,
+      </if>
+      <if test="recommend != null">
+        recommend,
+      </if>
+      <if test="weixin != null">
+        weixin,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="userlogopath != null">
+        userLogoPath,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="productid != null">
+        productId,
+      </if>
+      <if test="accountbalance != null">
+        accountBalance,
+      </if>
+      <if test="salescore != null">
+        saleScore,
+      </if>
+      <if test="scoreCanTixian != null">
+        score_can_tixian,
+      </if>
+      <if test="scoreDoTixian != null">
+        score_do_tixian,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storename != null">
+        #{storename,jdbcType=VARCHAR},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="audit != null">
+        #{audit,jdbcType=BIT},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="photos != null">
+        #{photos,jdbcType=VARCHAR},
+      </if>
+      <if test="recommend != null">
+        #{recommend,jdbcType=BIT},
+      </if>
+      <if test="weixin != null">
+        #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="userlogopath != null">
+        #{userlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productid != null">
+        #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="accountbalance != null">
+        #{accountbalance,jdbcType=DECIMAL},
+      </if>
+      <if test="salescore != null">
+        #{salescore,jdbcType=VARCHAR},
+      </if>
+      <if test="scoreCanTixian != null">
+        #{scoreCanTixian,jdbcType=BIGINT},
+      </if>
+      <if test="scoreDoTixian != null">
+        #{scoreDoTixian,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygStore">
+    update yyg_store
+    <set>
+      <if test="storename != null">
+        storeName = #{storename,jdbcType=VARCHAR},
+      </if>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="audit != null">
+        audit = #{audit,jdbcType=BIT},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="photos != null">
+        photos = #{photos,jdbcType=VARCHAR},
+      </if>
+      <if test="recommend != null">
+        recommend = #{recommend,jdbcType=BIT},
+      </if>
+      <if test="weixin != null">
+        weixin = #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="userlogopath != null">
+        userLogoPath = #{userlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productid != null">
+        productId = #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="accountbalance != null">
+        accountBalance = #{accountbalance,jdbcType=DECIMAL},
+      </if>
+      <if test="salescore != null">
+        saleScore = #{salescore,jdbcType=VARCHAR},
+      </if>
+      <if test="scoreCanTixian != null">
+        score_can_tixian = #{scoreCanTixian,jdbcType=BIGINT},
+      </if>
+      <if test="scoreDoTixian != null">
+        score_do_tixian = #{scoreDoTixian,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygStore">
+    update yyg_store
+    set storeName = #{storename,jdbcType=VARCHAR},
+      createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      version = #{version,jdbcType=BIGINT},
+      audit = #{audit,jdbcType=BIT},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      photos = #{photos,jdbcType=VARCHAR},
+      recommend = #{recommend,jdbcType=BIT},
+      weixin = #{weixin,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=BIGINT},
+      userLogoPath = #{userlogopath,jdbcType=VARCHAR},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      productId = #{productid,jdbcType=BIGINT},
+      accountBalance = #{accountbalance,jdbcType=DECIMAL},
+      saleScore = #{salescore,jdbcType=VARCHAR},
+      score_can_tixian = #{scoreCanTixian,jdbcType=BIGINT},
+      score_do_tixian = #{scoreDoTixian,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

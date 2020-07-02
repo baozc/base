@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: wx
+  name: wx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: wx
+    spec:
+      containers:
+      - image: baozc/jibtest
+        name: jibtest
+        resources: {}
+status: {}

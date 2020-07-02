@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygYgOrderMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygYgOrder">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="addrJson" jdbcType="VARCHAR" property="addrjson" />
+    <result column="expCom" jdbcType="VARCHAR" property="expcom" />
+    <result column="expNo" jdbcType="VARCHAR" property="expno" />
+    <result column="orderId" jdbcType="VARCHAR" property="orderid" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="shareId" jdbcType="BIGINT" property="shareid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="userYgId" jdbcType="BIGINT" property="userygid" />
+    <result column="ygProductId" jdbcType="BIGINT" property="ygproductid" />
+    <result column="ygProductName" jdbcType="VARCHAR" property="ygproductname" />
+    <result column="ygProductPeriod" jdbcType="BIGINT" property="ygproductperiod" />
+    <result column="ygProductTotalNum" jdbcType="BIGINT" property="ygproducttotalnum" />
+    <result column="ygProductJson" jdbcType="VARCHAR" property="ygproductjson" />
+    <result column="sendRemark" jdbcType="VARCHAR" property="sendremark" />
+    <result column="expComJson" jdbcType="VARCHAR" property="expcomjson" />
+    <result column="acceptTime" jdbcType="TIMESTAMP" property="accepttime" />
+    <result column="sendTime" jdbcType="TIMESTAMP" property="sendtime" />
+    <result column="shareTime" jdbcType="TIMESTAMP" property="sharetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, addrJson, expCom, expNo, orderId, remark, shareId, status, 
+    userId, userYgId, ygProductId, ygProductName, ygProductPeriod, ygProductTotalNum, 
+    ygProductJson, sendRemark, expComJson, acceptTime, sendTime, shareTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from yyg_yg_order
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_yg_order
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygYgOrder">
+    insert into yyg_yg_order (id, createBy, createById, 
+      createTime, deleteStatus, lastModifyBy, 
+      lastModifyById, lastModifyTime, version, 
+      addrJson, expCom, expNo, 
+      orderId, remark, shareId, 
+      status, userId, userYgId, 
+      ygProductId, ygProductName, ygProductPeriod, 
+      ygProductTotalNum, ygProductJson, sendRemark, 
+      expComJson, acceptTime, sendTime, 
+      shareTime)
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
+      #{addrjson,jdbcType=VARCHAR}, #{expcom,jdbcType=VARCHAR}, #{expno,jdbcType=VARCHAR}, 
+      #{orderid,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{shareid,jdbcType=BIGINT}, 
+      #{status,jdbcType=INTEGER}, #{userid,jdbcType=BIGINT}, #{userygid,jdbcType=BIGINT}, 
+      #{ygproductid,jdbcType=BIGINT}, #{ygproductname,jdbcType=VARCHAR}, #{ygproductperiod,jdbcType=BIGINT}, 
+      #{ygproducttotalnum,jdbcType=BIGINT}, #{ygproductjson,jdbcType=VARCHAR}, #{sendremark,jdbcType=VARCHAR}, 
+      #{expcomjson,jdbcType=VARCHAR}, #{accepttime,jdbcType=TIMESTAMP}, #{sendtime,jdbcType=TIMESTAMP}, 
+      #{sharetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygYgOrder">
+    insert into yyg_yg_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="addrjson != null">
+        addrJson,
+      </if>
+      <if test="expcom != null">
+        expCom,
+      </if>
+      <if test="expno != null">
+        expNo,
+      </if>
+      <if test="orderid != null">
+        orderId,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="shareid != null">
+        shareId,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="userygid != null">
+        userYgId,
+      </if>
+      <if test="ygproductid != null">
+        ygProductId,
+      </if>
+      <if test="ygproductname != null">
+        ygProductName,
+      </if>
+      <if test="ygproductperiod != null">
+        ygProductPeriod,
+      </if>
+      <if test="ygproducttotalnum != null">
+        ygProductTotalNum,
+      </if>
+      <if test="ygproductjson != null">
+        ygProductJson,
+      </if>
+      <if test="sendremark != null">
+        sendRemark,
+      </if>
+      <if test="expcomjson != null">
+        expComJson,
+      </if>
+      <if test="accepttime != null">
+        acceptTime,
+      </if>
+      <if test="sendtime != null">
+        sendTime,
+      </if>
+      <if test="sharetime != null">
+        shareTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="addrjson != null">
+        #{addrjson,jdbcType=VARCHAR},
+      </if>
+      <if test="expcom != null">
+        #{expcom,jdbcType=VARCHAR},
+      </if>
+      <if test="expno != null">
+        #{expno,jdbcType=VARCHAR},
+      </if>
+      <if test="orderid != null">
+        #{orderid,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="shareid != null">
+        #{shareid,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="userygid != null">
+        #{userygid,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductid != null">
+        #{ygproductid,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductname != null">
+        #{ygproductname,jdbcType=VARCHAR},
+      </if>
+      <if test="ygproductperiod != null">
+        #{ygproductperiod,jdbcType=BIGINT},
+      </if>
+      <if test="ygproducttotalnum != null">
+        #{ygproducttotalnum,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductjson != null">
+        #{ygproductjson,jdbcType=VARCHAR},
+      </if>
+      <if test="sendremark != null">
+        #{sendremark,jdbcType=VARCHAR},
+      </if>
+      <if test="expcomjson != null">
+        #{expcomjson,jdbcType=VARCHAR},
+      </if>
+      <if test="accepttime != null">
+        #{accepttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sendtime != null">
+        #{sendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sharetime != null">
+        #{sharetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygYgOrder">
+    update yyg_yg_order
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="addrjson != null">
+        addrJson = #{addrjson,jdbcType=VARCHAR},
+      </if>
+      <if test="expcom != null">
+        expCom = #{expcom,jdbcType=VARCHAR},
+      </if>
+      <if test="expno != null">
+        expNo = #{expno,jdbcType=VARCHAR},
+      </if>
+      <if test="orderid != null">
+        orderId = #{orderid,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="shareid != null">
+        shareId = #{shareid,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="userygid != null">
+        userYgId = #{userygid,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductid != null">
+        ygProductId = #{ygproductid,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductname != null">
+        ygProductName = #{ygproductname,jdbcType=VARCHAR},
+      </if>
+      <if test="ygproductperiod != null">
+        ygProductPeriod = #{ygproductperiod,jdbcType=BIGINT},
+      </if>
+      <if test="ygproducttotalnum != null">
+        ygProductTotalNum = #{ygproducttotalnum,jdbcType=BIGINT},
+      </if>
+      <if test="ygproductjson != null">
+        ygProductJson = #{ygproductjson,jdbcType=VARCHAR},
+      </if>
+      <if test="sendremark != null">
+        sendRemark = #{sendremark,jdbcType=VARCHAR},
+      </if>
+      <if test="expcomjson != null">
+        expComJson = #{expcomjson,jdbcType=VARCHAR},
+      </if>
+      <if test="accepttime != null">
+        acceptTime = #{accepttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sendtime != null">
+        sendTime = #{sendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sharetime != null">
+        shareTime = #{sharetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygYgOrder">
+    update yyg_yg_order
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      addrJson = #{addrjson,jdbcType=VARCHAR},
+      expCom = #{expcom,jdbcType=VARCHAR},
+      expNo = #{expno,jdbcType=VARCHAR},
+      orderId = #{orderid,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      shareId = #{shareid,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      userId = #{userid,jdbcType=BIGINT},
+      userYgId = #{userygid,jdbcType=BIGINT},
+      ygProductId = #{ygproductid,jdbcType=BIGINT},
+      ygProductName = #{ygproductname,jdbcType=VARCHAR},
+      ygProductPeriod = #{ygproductperiod,jdbcType=BIGINT},
+      ygProductTotalNum = #{ygproducttotalnum,jdbcType=BIGINT},
+      ygProductJson = #{ygproductjson,jdbcType=VARCHAR},
+      sendRemark = #{sendremark,jdbcType=VARCHAR},
+      expComJson = #{expcomjson,jdbcType=VARCHAR},
+      acceptTime = #{accepttime,jdbcType=TIMESTAMP},
+      sendTime = #{sendtime,jdbcType=TIMESTAMP},
+      shareTime = #{sharetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

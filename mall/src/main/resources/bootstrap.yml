@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: mall
+  cloud:
+    config:
+      profile: dev
+#      uri: http://localhost:8888
+      discovery:
+        enabled: true
+        service-id: configserver
+        
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${server.url}:8080/eureka/
+  instance:
+    hostname: localhost
+    
+
+server:
+  port: 8100
+  url: localhost
+  servlet:
+    context-path: /mall

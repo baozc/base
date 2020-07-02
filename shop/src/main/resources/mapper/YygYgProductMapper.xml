@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygYgProductMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygYgProduct">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="brandId" jdbcType="BIGINT" property="brandid" />
+    <result column="cateId" jdbcType="VARCHAR" property="cateid" />
+    <result column="storeId" jdbcType="BIGINT" property="storeid" />
+    <result column="lastUserBuyDateLong" jdbcType="BIGINT" property="lastuserbuydatelong" />
+    <result column="totalNum" jdbcType="BIGINT" property="totalnum" />
+    <result column="usedNum" jdbcType="BIGINT" property="usednum" />
+    <result column="leaveNum" jdbcType="BIGINT" property="leavenum" />
+    <result column="origPrice" jdbcType="BIGINT" property="origprice" />
+    <result column="singlePrice" jdbcType="BIGINT" property="singleprice" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="limitPeriods" jdbcType="BIGINT" property="limitperiods" />
+    <result column="llscNo" jdbcType="BIT" property="llscno" />
+    <result column="llscPeriodNo" jdbcType="BIGINT" property="llscperiodno" />
+    <result column="logoPath" jdbcType="VARCHAR" property="logopath" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="period" jdbcType="INTEGER" property="period" />
+    <result column="preYgProductId" jdbcType="BIGINT" property="preygproductid" />
+    <result column="productId" jdbcType="BIGINT" property="productid" />
+    <result column="publishDate" jdbcType="TIMESTAMP" property="publishdate" />
+    <result column="recommend" jdbcType="BIT" property="recommend" />
+    <result column="seqNo" jdbcType="BIGINT" property="seqno" />
+    <result column="winDate" jdbcType="TIMESTAMP" property="windate" />
+    <result column="winNo" jdbcType="BIGINT" property="winno" />
+    <result column="winUserBuyDateLong" jdbcType="BIGINT" property="winuserbuydatelong" />
+    <result column="winUserBuyNum" jdbcType="BIGINT" property="winuserbuynum" />
+    <result column="winUserId" jdbcType="BIGINT" property="winuserid" />
+    <result column="winUserLogoPath" jdbcType="VARCHAR" property="winuserlogopath" />
+    <result column="winUserNickName" jdbcType="VARCHAR" property="winusernickname" />
+    <result column="zdWin" jdbcType="BIT" property="zdwin" />
+    <result column="winUserIpAddr" jdbcType="VARCHAR" property="winuseripaddr" />
+    <result column="weixin_buy" jdbcType="VARCHAR" property="weixinBuy" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="cn.com.shop.entity.YygYgProduct">
+    <result column="leaveBuyNosContentId" jdbcType="LONGVARCHAR" property="leavebuynoscontentid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, brandId, cateId, storeId, lastUserBuyDateLong, totalNum, 
+    usedNum, leaveNum, origPrice, singlePrice, status, limitPeriods, llscNo, llscPeriodNo, 
+    logoPath, name, title, period, preYgProductId, productId, publishDate, recommend, 
+    seqNo, winDate, winNo, winUserBuyDateLong, winUserBuyNum, winUserId, winUserLogoPath, 
+    winUserNickName, zdWin, winUserIpAddr, weixin_buy
+  </sql>
+  <sql id="Blob_Column_List">
+    leaveBuyNosContentId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from yyg_yg_product
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_yg_product
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygYgProduct">
+    insert into yyg_yg_product (id, createBy, createById, 
+      createTime, deleteStatus, lastModifyBy, 
+      lastModifyById, lastModifyTime, version, 
+      brandId, cateId, storeId, 
+      lastUserBuyDateLong, totalNum, usedNum, 
+      leaveNum, origPrice, singlePrice, 
+      status, limitPeriods, llscNo, 
+      llscPeriodNo, logoPath, name, 
+      title, period, preYgProductId, 
+      productId, publishDate, recommend, 
+      seqNo, winDate, winNo, 
+      winUserBuyDateLong, winUserBuyNum, winUserId, 
+      winUserLogoPath, winUserNickName, zdWin, 
+      winUserIpAddr, weixin_buy, leaveBuyNosContentId
+      )
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
+      #{brandid,jdbcType=BIGINT}, #{cateid,jdbcType=VARCHAR}, #{storeid,jdbcType=BIGINT}, 
+      #{lastuserbuydatelong,jdbcType=BIGINT}, #{totalnum,jdbcType=BIGINT}, #{usednum,jdbcType=BIGINT}, 
+      #{leavenum,jdbcType=BIGINT}, #{origprice,jdbcType=BIGINT}, #{singleprice,jdbcType=BIGINT}, 
+      #{status,jdbcType=INTEGER}, #{limitperiods,jdbcType=BIGINT}, #{llscno,jdbcType=BIT}, 
+      #{llscperiodno,jdbcType=BIGINT}, #{logopath,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{period,jdbcType=INTEGER}, #{preygproductid,jdbcType=BIGINT}, 
+      #{productid,jdbcType=BIGINT}, #{publishdate,jdbcType=TIMESTAMP}, #{recommend,jdbcType=BIT}, 
+      #{seqno,jdbcType=BIGINT}, #{windate,jdbcType=TIMESTAMP}, #{winno,jdbcType=BIGINT}, 
+      #{winuserbuydatelong,jdbcType=BIGINT}, #{winuserbuynum,jdbcType=BIGINT}, #{winuserid,jdbcType=BIGINT}, 
+      #{winuserlogopath,jdbcType=VARCHAR}, #{winusernickname,jdbcType=VARCHAR}, #{zdwin,jdbcType=BIT}, 
+      #{winuseripaddr,jdbcType=VARCHAR}, #{weixinBuy,jdbcType=VARCHAR}, #{leavebuynoscontentid,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygYgProduct">
+    insert into yyg_yg_product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="brandid != null">
+        brandId,
+      </if>
+      <if test="cateid != null">
+        cateId,
+      </if>
+      <if test="storeid != null">
+        storeId,
+      </if>
+      <if test="lastuserbuydatelong != null">
+        lastUserBuyDateLong,
+      </if>
+      <if test="totalnum != null">
+        totalNum,
+      </if>
+      <if test="usednum != null">
+        usedNum,
+      </if>
+      <if test="leavenum != null">
+        leaveNum,
+      </if>
+      <if test="origprice != null">
+        origPrice,
+      </if>
+      <if test="singleprice != null">
+        singlePrice,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="limitperiods != null">
+        limitPeriods,
+      </if>
+      <if test="llscno != null">
+        llscNo,
+      </if>
+      <if test="llscperiodno != null">
+        llscPeriodNo,
+      </if>
+      <if test="logopath != null">
+        logoPath,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="period != null">
+        period,
+      </if>
+      <if test="preygproductid != null">
+        preYgProductId,
+      </if>
+      <if test="productid != null">
+        productId,
+      </if>
+      <if test="publishdate != null">
+        publishDate,
+      </if>
+      <if test="recommend != null">
+        recommend,
+      </if>
+      <if test="seqno != null">
+        seqNo,
+      </if>
+      <if test="windate != null">
+        winDate,
+      </if>
+      <if test="winno != null">
+        winNo,
+      </if>
+      <if test="winuserbuydatelong != null">
+        winUserBuyDateLong,
+      </if>
+      <if test="winuserbuynum != null">
+        winUserBuyNum,
+      </if>
+      <if test="winuserid != null">
+        winUserId,
+      </if>
+      <if test="winuserlogopath != null">
+        winUserLogoPath,
+      </if>
+      <if test="winusernickname != null">
+        winUserNickName,
+      </if>
+      <if test="zdwin != null">
+        zdWin,
+      </if>
+      <if test="winuseripaddr != null">
+        winUserIpAddr,
+      </if>
+      <if test="weixinBuy != null">
+        weixin_buy,
+      </if>
+      <if test="leavebuynoscontentid != null">
+        leaveBuyNosContentId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="brandid != null">
+        #{brandid,jdbcType=BIGINT},
+      </if>
+      <if test="cateid != null">
+        #{cateid,jdbcType=VARCHAR},
+      </if>
+      <if test="storeid != null">
+        #{storeid,jdbcType=BIGINT},
+      </if>
+      <if test="lastuserbuydatelong != null">
+        #{lastuserbuydatelong,jdbcType=BIGINT},
+      </if>
+      <if test="totalnum != null">
+        #{totalnum,jdbcType=BIGINT},
+      </if>
+      <if test="usednum != null">
+        #{usednum,jdbcType=BIGINT},
+      </if>
+      <if test="leavenum != null">
+        #{leavenum,jdbcType=BIGINT},
+      </if>
+      <if test="origprice != null">
+        #{origprice,jdbcType=BIGINT},
+      </if>
+      <if test="singleprice != null">
+        #{singleprice,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="limitperiods != null">
+        #{limitperiods,jdbcType=BIGINT},
+      </if>
+      <if test="llscno != null">
+        #{llscno,jdbcType=BIT},
+      </if>
+      <if test="llscperiodno != null">
+        #{llscperiodno,jdbcType=BIGINT},
+      </if>
+      <if test="logopath != null">
+        #{logopath,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="period != null">
+        #{period,jdbcType=INTEGER},
+      </if>
+      <if test="preygproductid != null">
+        #{preygproductid,jdbcType=BIGINT},
+      </if>
+      <if test="productid != null">
+        #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="publishdate != null">
+        #{publishdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recommend != null">
+        #{recommend,jdbcType=BIT},
+      </if>
+      <if test="seqno != null">
+        #{seqno,jdbcType=BIGINT},
+      </if>
+      <if test="windate != null">
+        #{windate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="winno != null">
+        #{winno,jdbcType=BIGINT},
+      </if>
+      <if test="winuserbuydatelong != null">
+        #{winuserbuydatelong,jdbcType=BIGINT},
+      </if>
+      <if test="winuserbuynum != null">
+        #{winuserbuynum,jdbcType=BIGINT},
+      </if>
+      <if test="winuserid != null">
+        #{winuserid,jdbcType=BIGINT},
+      </if>
+      <if test="winuserlogopath != null">
+        #{winuserlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="winusernickname != null">
+        #{winusernickname,jdbcType=VARCHAR},
+      </if>
+      <if test="zdwin != null">
+        #{zdwin,jdbcType=BIT},
+      </if>
+      <if test="winuseripaddr != null">
+        #{winuseripaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinBuy != null">
+        #{weixinBuy,jdbcType=VARCHAR},
+      </if>
+      <if test="leavebuynoscontentid != null">
+        #{leavebuynoscontentid,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygYgProduct">
+    update yyg_yg_product
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="brandid != null">
+        brandId = #{brandid,jdbcType=BIGINT},
+      </if>
+      <if test="cateid != null">
+        cateId = #{cateid,jdbcType=VARCHAR},
+      </if>
+      <if test="storeid != null">
+        storeId = #{storeid,jdbcType=BIGINT},
+      </if>
+      <if test="lastuserbuydatelong != null">
+        lastUserBuyDateLong = #{lastuserbuydatelong,jdbcType=BIGINT},
+      </if>
+      <if test="totalnum != null">
+        totalNum = #{totalnum,jdbcType=BIGINT},
+      </if>
+      <if test="usednum != null">
+        usedNum = #{usednum,jdbcType=BIGINT},
+      </if>
+      <if test="leavenum != null">
+        leaveNum = #{leavenum,jdbcType=BIGINT},
+      </if>
+      <if test="origprice != null">
+        origPrice = #{origprice,jdbcType=BIGINT},
+      </if>
+      <if test="singleprice != null">
+        singlePrice = #{singleprice,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="limitperiods != null">
+        limitPeriods = #{limitperiods,jdbcType=BIGINT},
+      </if>
+      <if test="llscno != null">
+        llscNo = #{llscno,jdbcType=BIT},
+      </if>
+      <if test="llscperiodno != null">
+        llscPeriodNo = #{llscperiodno,jdbcType=BIGINT},
+      </if>
+      <if test="logopath != null">
+        logoPath = #{logopath,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="period != null">
+        period = #{period,jdbcType=INTEGER},
+      </if>
+      <if test="preygproductid != null">
+        preYgProductId = #{preygproductid,jdbcType=BIGINT},
+      </if>
+      <if test="productid != null">
+        productId = #{productid,jdbcType=BIGINT},
+      </if>
+      <if test="publishdate != null">
+        publishDate = #{publishdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recommend != null">
+        recommend = #{recommend,jdbcType=BIT},
+      </if>
+      <if test="seqno != null">
+        seqNo = #{seqno,jdbcType=BIGINT},
+      </if>
+      <if test="windate != null">
+        winDate = #{windate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="winno != null">
+        winNo = #{winno,jdbcType=BIGINT},
+      </if>
+      <if test="winuserbuydatelong != null">
+        winUserBuyDateLong = #{winuserbuydatelong,jdbcType=BIGINT},
+      </if>
+      <if test="winuserbuynum != null">
+        winUserBuyNum = #{winuserbuynum,jdbcType=BIGINT},
+      </if>
+      <if test="winuserid != null">
+        winUserId = #{winuserid,jdbcType=BIGINT},
+      </if>
+      <if test="winuserlogopath != null">
+        winUserLogoPath = #{winuserlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="winusernickname != null">
+        winUserNickName = #{winusernickname,jdbcType=VARCHAR},
+      </if>
+      <if test="zdwin != null">
+        zdWin = #{zdwin,jdbcType=BIT},
+      </if>
+      <if test="winuseripaddr != null">
+        winUserIpAddr = #{winuseripaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinBuy != null">
+        weixin_buy = #{weixinBuy,jdbcType=VARCHAR},
+      </if>
+      <if test="leavebuynoscontentid != null">
+        leaveBuyNosContentId = #{leavebuynoscontentid,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.com.shop.entity.YygYgProduct">
+    update yyg_yg_product
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      brandId = #{brandid,jdbcType=BIGINT},
+      cateId = #{cateid,jdbcType=VARCHAR},
+      storeId = #{storeid,jdbcType=BIGINT},
+      lastUserBuyDateLong = #{lastuserbuydatelong,jdbcType=BIGINT},
+      totalNum = #{totalnum,jdbcType=BIGINT},
+      usedNum = #{usednum,jdbcType=BIGINT},
+      leaveNum = #{leavenum,jdbcType=BIGINT},
+      origPrice = #{origprice,jdbcType=BIGINT},
+      singlePrice = #{singleprice,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      limitPeriods = #{limitperiods,jdbcType=BIGINT},
+      llscNo = #{llscno,jdbcType=BIT},
+      llscPeriodNo = #{llscperiodno,jdbcType=BIGINT},
+      logoPath = #{logopath,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      period = #{period,jdbcType=INTEGER},
+      preYgProductId = #{preygproductid,jdbcType=BIGINT},
+      productId = #{productid,jdbcType=BIGINT},
+      publishDate = #{publishdate,jdbcType=TIMESTAMP},
+      recommend = #{recommend,jdbcType=BIT},
+      seqNo = #{seqno,jdbcType=BIGINT},
+      winDate = #{windate,jdbcType=TIMESTAMP},
+      winNo = #{winno,jdbcType=BIGINT},
+      winUserBuyDateLong = #{winuserbuydatelong,jdbcType=BIGINT},
+      winUserBuyNum = #{winuserbuynum,jdbcType=BIGINT},
+      winUserId = #{winuserid,jdbcType=BIGINT},
+      winUserLogoPath = #{winuserlogopath,jdbcType=VARCHAR},
+      winUserNickName = #{winusernickname,jdbcType=VARCHAR},
+      zdWin = #{zdwin,jdbcType=BIT},
+      winUserIpAddr = #{winuseripaddr,jdbcType=VARCHAR},
+      weixin_buy = #{weixinBuy,jdbcType=VARCHAR},
+      leaveBuyNosContentId = #{leavebuynoscontentid,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygYgProduct">
+    update yyg_yg_product
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      brandId = #{brandid,jdbcType=BIGINT},
+      cateId = #{cateid,jdbcType=VARCHAR},
+      storeId = #{storeid,jdbcType=BIGINT},
+      lastUserBuyDateLong = #{lastuserbuydatelong,jdbcType=BIGINT},
+      totalNum = #{totalnum,jdbcType=BIGINT},
+      usedNum = #{usednum,jdbcType=BIGINT},
+      leaveNum = #{leavenum,jdbcType=BIGINT},
+      origPrice = #{origprice,jdbcType=BIGINT},
+      singlePrice = #{singleprice,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      limitPeriods = #{limitperiods,jdbcType=BIGINT},
+      llscNo = #{llscno,jdbcType=BIT},
+      llscPeriodNo = #{llscperiodno,jdbcType=BIGINT},
+      logoPath = #{logopath,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      period = #{period,jdbcType=INTEGER},
+      preYgProductId = #{preygproductid,jdbcType=BIGINT},
+      productId = #{productid,jdbcType=BIGINT},
+      publishDate = #{publishdate,jdbcType=TIMESTAMP},
+      recommend = #{recommend,jdbcType=BIT},
+      seqNo = #{seqno,jdbcType=BIGINT},
+      winDate = #{windate,jdbcType=TIMESTAMP},
+      winNo = #{winno,jdbcType=BIGINT},
+      winUserBuyDateLong = #{winuserbuydatelong,jdbcType=BIGINT},
+      winUserBuyNum = #{winuserbuynum,jdbcType=BIGINT},
+      winUserId = #{winuserid,jdbcType=BIGINT},
+      winUserLogoPath = #{winuserlogopath,jdbcType=VARCHAR},
+      winUserNickName = #{winusernickname,jdbcType=VARCHAR},
+      zdWin = #{zdwin,jdbcType=BIT},
+      winUserIpAddr = #{winuseripaddr,jdbcType=VARCHAR},
+      weixin_buy = #{weixinBuy,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

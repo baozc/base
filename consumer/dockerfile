@@ -1,0 +1,11 @@
+FROM jdk8:latest
+MAINTAINER baozhichao@ultrapower.com.cn
+COPY eureka-client-consumer-1.0.jar /
+EXPOSE 8080
+ENV TZ=Asia/Shanghai
+ENV EUREKA_SERVER_HOST localhost
+ENV EUREKA_HOST localhost
+ENV SERVER_PORT 8002
+#RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai      /etc/localtime
+#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENTRYPOINT nohup java -jar /eureka-client-consumer-1.0.jar --server.url=$EUREKA_SERVER_HOST --eureka.instance.hostname=$EUREKA_HOST --server.port=$SERVER_PORT

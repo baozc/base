@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "rong",
+      "type": "cn.baozcc.me.configuration.constant.RongCloud",
+      "sourceType": "cn.baozcc.me.configuration.constant.RongCloud"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rong.active",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.baozcc.me.configuration.constant.RongCloud",
+      "defaultValue": false
+    },
+    {
+      "name": "rong.app-key",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.RongCloud"
+    },
+    {
+      "name": "rong.app-secret",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.RongCloud"
+    },
+    {
+      "name": "rong.url",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.RongCloud"
+    }
+  ],
+  "hints": []
+}

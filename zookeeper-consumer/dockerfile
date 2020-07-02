@@ -1,0 +1,10 @@
+FROM jdk8:latest
+MAINTAINER baozhichao@ultrapower.com.cn
+COPY zookeeper-consumer-1.0.jar /
+EXPOSE 8080
+ENV TZ=Asia/Shanghai
+ENV DEBUG=false
+ENV ZKURL=localhost:2181
+#RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai      /etc/localtime
+#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENTRYPOINT nohup java -jar /zookeeper-consumer-1.0.jar --debug=$DEBUG --spring.cloud.zookeeper.connect-string=$ZKURL

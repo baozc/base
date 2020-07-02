@@ -1,0 +1,81 @@
+spring:
+  devtools:
+    restart:
+      exclude: static/**
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  resources:
+    chain:
+      strategy:
+        fixed:
+          enabled: true
+          paths: /js/**,/v1.0.0/**
+          version: v1.0.0
+  freemarker:
+    cache: false
+
+logging:
+  config: classpath:log4j2/dev.xml
+
+mybatis:
+  config-location: classpath:/mybatis-config.xml
+  mapper-locations: classpath:/com/ultrapower/me/**/dao/maps/*Mapper.xml
+#  configuration:
+#    # 将数据库的NN_NN格式字段，在java结果集对象中自动转换成驼峰命名参数
+#    map-underscore-to-camel-case: true
+
+database:
+  type: mysql
+  url: 192.168.182.141
+  port: 7000
+  name: ultrame
+  userName: root
+  pwd: root
+
+mysql:
+  url: jdbc:${database.type}://${database.url}:${database.port}/${database.name}?useSSL=false&allowMultiQueries=true
+  username: ${database.userName}
+  password: ${database.pwd}
+  driverClassName: com.mysql.cj.jdbc.Driver
+#  driverClassName: com.mysql.jdbc.Driver
+  maxActive: 20
+  initialSize: 5
+  maxWait: 60000
+  minIdle: 10
+  maxIde: 15
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  testWhileIdle: true
+  
+card:
+  me-security-key: me
+  me-channel: http://met.ultrapower.com.cn:38096/MeOpen
+  me-multimedia: http://met.ultrapower.com.cn:38096/MeOpen
+  me-open-auth: 192.168.182.141
+  me-open-auth-port: 38097
+  me-open-auth-https-port: 8443
+  me-open-port: 38096
+  http-connection-sotimeout: 20000
+  http-connection-timeout: 2000
+  http-connmanager-timeout: 1000
+  default-lon: 116.423783
+  default-lat: 40.038317
+  default-distance: 50
+  worklocation: 北京市朝阳区北苑路甲13号
+  worklocation-alias: 北辰·泰岳大厦
+  is-use-pmo: true
+  is-use-pmo-v1: true
+  is-allow-outside: true
+  attendanceTime: 09:00:00
+  closingTime: 18:00:00
+  config-app-get-info-type: mobile
+  pmo-channel: http://eoms.ultrapower.com.cn/ultrapmo
+  circle-channel: http://10.10.70.164:39080/circle
+  root-dept: UltraBM,\u526f\u603b\u88c1\u7ba1\u7406\u7ec4,\u5e7f\u901a\u795e\u5dde,\u4e92\u8054\u65f6\u4ee3,\u5947\u70b9\u56fd\u9645,\u795e\u5dde\u826f\u54c1,\u6cf0\u5947\u4e92\u52a8,\u6cf0\u5cb3\u57fa\u91d1,\u65b0\u52a0\u5761\u667a\u6865,\u65b0\u5a92\u4f20\u4fe1,\u65b0\u5a92\u519c\u4fe1,\u4e91\u4e2d\u878d\u4fe1
+  email-list: wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjuanzh@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn,wangjie@ultrapower.com.cn
+
+server:
+  servlet:
+    context-path: /OaTimecard

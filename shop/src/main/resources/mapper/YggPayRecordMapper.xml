@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YggPayRecordMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YggPayRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="amount" jdbcType="BIGINT" property="amount" />
+    <result column="carts" jdbcType="VARCHAR" property="carts" />
+    <result column="payNo" jdbcType="VARCHAR" property="payno" />
+    <result column="payStatus" jdbcType="INTEGER" property="paystatus" />
+    <result column="payTime" jdbcType="TIMESTAMP" property="paytime" />
+    <result column="payType" jdbcType="INTEGER" property="paytype" />
+    <result column="thirdPayTime" jdbcType="TIMESTAMP" property="thirdpaytime" />
+    <result column="thirdTradeNo" jdbcType="VARCHAR" property="thirdtradeno" />
+    <result column="thirdTradeStatus" jdbcType="VARCHAR" property="thirdtradestatus" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, amount, carts, payNo, payStatus, payTime, payType, thirdPayTime, 
+    thirdTradeNo, thirdTradeStatus, userId, userName
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ygg_pay_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from ygg_pay_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YggPayRecord">
+    insert into ygg_pay_record (id, createBy, createById, 
+      createTime, deleteStatus, lastModifyBy, 
+      lastModifyById, lastModifyTime, version, 
+      amount, carts, payNo, 
+      payStatus, payTime, payType, 
+      thirdPayTime, thirdTradeNo, thirdTradeStatus, 
+      userId, userName)
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
+      #{amount,jdbcType=BIGINT}, #{carts,jdbcType=VARCHAR}, #{payno,jdbcType=VARCHAR}, 
+      #{paystatus,jdbcType=INTEGER}, #{paytime,jdbcType=TIMESTAMP}, #{paytype,jdbcType=INTEGER}, 
+      #{thirdpaytime,jdbcType=TIMESTAMP}, #{thirdtradeno,jdbcType=VARCHAR}, #{thirdtradestatus,jdbcType=VARCHAR}, 
+      #{userid,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YggPayRecord">
+    insert into ygg_pay_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="carts != null">
+        carts,
+      </if>
+      <if test="payno != null">
+        payNo,
+      </if>
+      <if test="paystatus != null">
+        payStatus,
+      </if>
+      <if test="paytime != null">
+        payTime,
+      </if>
+      <if test="paytype != null">
+        payType,
+      </if>
+      <if test="thirdpaytime != null">
+        thirdPayTime,
+      </if>
+      <if test="thirdtradeno != null">
+        thirdTradeNo,
+      </if>
+      <if test="thirdtradestatus != null">
+        thirdTradeStatus,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="username != null">
+        userName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=BIGINT},
+      </if>
+      <if test="carts != null">
+        #{carts,jdbcType=VARCHAR},
+      </if>
+      <if test="payno != null">
+        #{payno,jdbcType=VARCHAR},
+      </if>
+      <if test="paystatus != null">
+        #{paystatus,jdbcType=INTEGER},
+      </if>
+      <if test="paytime != null">
+        #{paytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paytype != null">
+        #{paytype,jdbcType=INTEGER},
+      </if>
+      <if test="thirdpaytime != null">
+        #{thirdpaytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="thirdtradeno != null">
+        #{thirdtradeno,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdtradestatus != null">
+        #{thirdtradestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YggPayRecord">
+    update ygg_pay_record
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=BIGINT},
+      </if>
+      <if test="carts != null">
+        carts = #{carts,jdbcType=VARCHAR},
+      </if>
+      <if test="payno != null">
+        payNo = #{payno,jdbcType=VARCHAR},
+      </if>
+      <if test="paystatus != null">
+        payStatus = #{paystatus,jdbcType=INTEGER},
+      </if>
+      <if test="paytime != null">
+        payTime = #{paytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paytype != null">
+        payType = #{paytype,jdbcType=INTEGER},
+      </if>
+      <if test="thirdpaytime != null">
+        thirdPayTime = #{thirdpaytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="thirdtradeno != null">
+        thirdTradeNo = #{thirdtradeno,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdtradestatus != null">
+        thirdTradeStatus = #{thirdtradestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=BIGINT},
+      </if>
+      <if test="username != null">
+        userName = #{username,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YggPayRecord">
+    update ygg_pay_record
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      amount = #{amount,jdbcType=BIGINT},
+      carts = #{carts,jdbcType=VARCHAR},
+      payNo = #{payno,jdbcType=VARCHAR},
+      payStatus = #{paystatus,jdbcType=INTEGER},
+      payTime = #{paytime,jdbcType=TIMESTAMP},
+      payType = #{paytype,jdbcType=INTEGER},
+      thirdPayTime = #{thirdpaytime,jdbcType=TIMESTAMP},
+      thirdTradeNo = #{thirdtradeno,jdbcType=VARCHAR},
+      thirdTradeStatus = #{thirdtradestatus,jdbcType=VARCHAR},
+      userId = #{userid,jdbcType=BIGINT},
+      userName = #{username,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

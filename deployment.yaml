@@ -1,0 +1,108 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  namespace: dev
+  name: wx
+spec:
+  selector:
+    matchLabels:
+      app: wx
+  template:
+    metadata:
+      labels:
+        app: wx
+    spec:
+      nodeSelector:
+        env: dev
+      initContainers:
+        - name: copyjarfile
+          image: baozc/jibtest
+#          imagePullPolicy: Always
+          command: ["/bin/sh"]
+          args: ["-c", "cp /app/* /workDir"]
+          volumeMounts:
+            - mountPath: /workDir
+              name: jar
+      containers:
+        - image: baozc/jibtest
+          resources:
+            limits:
+              cpu: "1"
+              memory: "2048Mi"
+            requests:
+              cpu: "0.5"
+              memory: "1024Mi"
+          name: wx
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 5005
+              name: debug
+          imagePullPolicy: IfNotPresent
+#          env:
+#            - name: GC_OPTS
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: jvm-config
+#                  key: GC_OPTS
+#            - name: JAVA_OPTS
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: jvm-config
+#                  key:  JAVA_OPTS
+#            - name: DEBUG_OPTS
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: jvm-config
+#                  key: DEBUG_OPTS
+          command: ["/bin/sh","-c"]
+          args: ["mkdir /logs; cd /app; java $(JAVA_OPTS) $(DEBUG_OPTS)  $(GC_OPTS) -Dspring.profiles.active=prod -jar /app/application.jar ;"]
+#          volumeMounts:
+#            - name: localtime
+#              mountPath: /etc/localtime
+#              subPath: localtime
+#            - name: timezone
+#              mountPath: /etc/timezone
+#              subPath: timezone
+#            - name: application-config
+#              mountPath: /app/application-prod.yml
+#              subPath: application-prod.yml
+#            - name: jar
+#              mountPath: /app
+#      volumes:
+#        - name: localtime
+#          configMap:
+#            name: time-config
+#            items:
+#              - key: localtime
+#                path: localtime
+#        - name: timezone
+#          configMap:
+#            name: time-config
+#            items:
+#              - key: timezone
+#                path: timezone
+#        - name: application-config
+#          configMap:
+#            name: wx-config
+#            items:
+#              - key: application-prod.yml
+#                path: application-prod.yml
+#        - name: jar
+#          emptyDir: {}
+---
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: dev
+  name: wx-service
+  labels:
+    service: wx
+spec:
+  selector:
+    app: wx
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygUserMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygUser">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="storeId" jdbcType="BIGINT" property="storeid" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="accountBalance" jdbcType="DECIMAL" property="accountbalance" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="areaId" jdbcType="BIGINT" property="areaid" />
+    <result column="cardNo" jdbcType="VARCHAR" property="cardno" />
+    <result column="cityId" jdbcType="BIGINT" property="cityid" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="headPhotoPath" jdbcType="VARCHAR" property="headphotopath" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="nickName" jdbcType="VARCHAR" property="nickname" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="seqNo" jdbcType="BIGINT" property="seqno" />
+    <result column="trueName" jdbcType="VARCHAR" property="truename" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="userType" jdbcType="INTEGER" property="usertype" />
+    <result column="innerUser" jdbcType="BIT" property="inneruser" />
+    <result column="expirDate" jdbcType="TIMESTAMP" property="expirdate" />
+    <result column="recommend" jdbcType="BIT" property="recommend" />
+    <result column="vipLevel" jdbcType="BIGINT" property="viplevel" />
+    <result column="weixin" jdbcType="VARCHAR" property="weixin" />
+    <result column="weixinCodePath" jdbcType="VARCHAR" property="weixincodepath" />
+    <result column="weixinLogoPath" jdbcType="VARCHAR" property="weixinlogopath" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="provinceId" jdbcType="BIGINT" property="provinceid" />
+    <result column="yaoqingUserId" jdbcType="BIGINT" property="yaoqinguserid" />
+    <result column="weixinOpenId" jdbcType="VARCHAR" property="weixinopenid" />
+    <result column="kaka_userId" jdbcType="VARCHAR" property="kakaUserid" />
+    <result column="ids_akk" jdbcType="VARCHAR" property="idsAkk" />
+    <result column="touzhu_total" jdbcType="DOUBLE" property="touzhuTotal" />
+    <result column="win_total" jdbcType="DOUBLE" property="winTotal" />
+    <result column="is_send_msg" jdbcType="VARCHAR" property="isSendMsg" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="cn.com.shop.entity.YygUser">
+    <result column="remark" jdbcType="LONGVARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, storeId, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, accountBalance, address, areaId, cardNo, cityId, email, 
+    headPhotoPath, mobile, nickName, password, qq, seqNo, trueName, userName, userType, 
+    innerUser, expirDate, recommend, vipLevel, weixin, weixinCodePath, weixinLogoPath, 
+    birthday, sex, provinceId, yaoqingUserId, weixinOpenId, kaka_userId, ids_akk, touzhu_total, 
+    win_total, is_send_msg
+  </sql>
+  <sql id="Blob_Column_List">
+    remark
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from yyg_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygUser">
+    insert into yyg_user (id, createBy, createById, 
+      createTime, storeId, deleteStatus, 
+      lastModifyBy, lastModifyById, lastModifyTime, 
+      version, accountBalance, address, 
+      areaId, cardNo, cityId, 
+      email, headPhotoPath, mobile, 
+      nickName, password, qq, 
+      seqNo, trueName, userName, 
+      userType, innerUser, expirDate, 
+      recommend, vipLevel, weixin, 
+      weixinCodePath, weixinLogoPath, birthday, 
+      sex, provinceId, yaoqingUserId, 
+      weixinOpenId, kaka_userId, ids_akk, 
+      touzhu_total, win_total, is_send_msg, 
+      remark)
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{storeid,jdbcType=BIGINT}, #{deletestatus,jdbcType=BIT}, 
+      #{lastmodifyby,jdbcType=VARCHAR}, #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, 
+      #{version,jdbcType=BIGINT}, #{accountbalance,jdbcType=DECIMAL}, #{address,jdbcType=VARCHAR}, 
+      #{areaid,jdbcType=BIGINT}, #{cardno,jdbcType=VARCHAR}, #{cityid,jdbcType=BIGINT}, 
+      #{email,jdbcType=VARCHAR}, #{headphotopath,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
+      #{nickname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{qq,jdbcType=VARCHAR}, 
+      #{seqno,jdbcType=BIGINT}, #{truename,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{usertype,jdbcType=INTEGER}, #{inneruser,jdbcType=BIT}, #{expirdate,jdbcType=TIMESTAMP}, 
+      #{recommend,jdbcType=BIT}, #{viplevel,jdbcType=BIGINT}, #{weixin,jdbcType=VARCHAR}, 
+      #{weixincodepath,jdbcType=VARCHAR}, #{weixinlogopath,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=INTEGER}, #{provinceid,jdbcType=BIGINT}, #{yaoqinguserid,jdbcType=BIGINT}, 
+      #{weixinopenid,jdbcType=VARCHAR}, #{kakaUserid,jdbcType=VARCHAR}, #{idsAkk,jdbcType=VARCHAR}, 
+      #{touzhuTotal,jdbcType=DOUBLE}, #{winTotal,jdbcType=DOUBLE}, #{isSendMsg,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygUser">
+    insert into yyg_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="storeid != null">
+        storeId,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="accountbalance != null">
+        accountBalance,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="areaid != null">
+        areaId,
+      </if>
+      <if test="cardno != null">
+        cardNo,
+      </if>
+      <if test="cityid != null">
+        cityId,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="headphotopath != null">
+        headPhotoPath,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="nickname != null">
+        nickName,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="qq != null">
+        qq,
+      </if>
+      <if test="seqno != null">
+        seqNo,
+      </if>
+      <if test="truename != null">
+        trueName,
+      </if>
+      <if test="username != null">
+        userName,
+      </if>
+      <if test="usertype != null">
+        userType,
+      </if>
+      <if test="inneruser != null">
+        innerUser,
+      </if>
+      <if test="expirdate != null">
+        expirDate,
+      </if>
+      <if test="recommend != null">
+        recommend,
+      </if>
+      <if test="viplevel != null">
+        vipLevel,
+      </if>
+      <if test="weixin != null">
+        weixin,
+      </if>
+      <if test="weixincodepath != null">
+        weixinCodePath,
+      </if>
+      <if test="weixinlogopath != null">
+        weixinLogoPath,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="provinceid != null">
+        provinceId,
+      </if>
+      <if test="yaoqinguserid != null">
+        yaoqingUserId,
+      </if>
+      <if test="weixinopenid != null">
+        weixinOpenId,
+      </if>
+      <if test="kakaUserid != null">
+        kaka_userId,
+      </if>
+      <if test="idsAkk != null">
+        ids_akk,
+      </if>
+      <if test="touzhuTotal != null">
+        touzhu_total,
+      </if>
+      <if test="winTotal != null">
+        win_total,
+      </if>
+      <if test="isSendMsg != null">
+        is_send_msg,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeid != null">
+        #{storeid,jdbcType=BIGINT},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="accountbalance != null">
+        #{accountbalance,jdbcType=DECIMAL},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="areaid != null">
+        #{areaid,jdbcType=BIGINT},
+      </if>
+      <if test="cardno != null">
+        #{cardno,jdbcType=VARCHAR},
+      </if>
+      <if test="cityid != null">
+        #{cityid,jdbcType=BIGINT},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="headphotopath != null">
+        #{headphotopath,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="seqno != null">
+        #{seqno,jdbcType=BIGINT},
+      </if>
+      <if test="truename != null">
+        #{truename,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null">
+        #{usertype,jdbcType=INTEGER},
+      </if>
+      <if test="inneruser != null">
+        #{inneruser,jdbcType=BIT},
+      </if>
+      <if test="expirdate != null">
+        #{expirdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recommend != null">
+        #{recommend,jdbcType=BIT},
+      </if>
+      <if test="viplevel != null">
+        #{viplevel,jdbcType=BIGINT},
+      </if>
+      <if test="weixin != null">
+        #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="weixincodepath != null">
+        #{weixincodepath,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinlogopath != null">
+        #{weixinlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="provinceid != null">
+        #{provinceid,jdbcType=BIGINT},
+      </if>
+      <if test="yaoqinguserid != null">
+        #{yaoqinguserid,jdbcType=BIGINT},
+      </if>
+      <if test="weixinopenid != null">
+        #{weixinopenid,jdbcType=VARCHAR},
+      </if>
+      <if test="kakaUserid != null">
+        #{kakaUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="idsAkk != null">
+        #{idsAkk,jdbcType=VARCHAR},
+      </if>
+      <if test="touzhuTotal != null">
+        #{touzhuTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="winTotal != null">
+        #{winTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="isSendMsg != null">
+        #{isSendMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygUser">
+    update yyg_user
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeid != null">
+        storeId = #{storeid,jdbcType=BIGINT},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="accountbalance != null">
+        accountBalance = #{accountbalance,jdbcType=DECIMAL},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="areaid != null">
+        areaId = #{areaid,jdbcType=BIGINT},
+      </if>
+      <if test="cardno != null">
+        cardNo = #{cardno,jdbcType=VARCHAR},
+      </if>
+      <if test="cityid != null">
+        cityId = #{cityid,jdbcType=BIGINT},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="headphotopath != null">
+        headPhotoPath = #{headphotopath,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        nickName = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="seqno != null">
+        seqNo = #{seqno,jdbcType=BIGINT},
+      </if>
+      <if test="truename != null">
+        trueName = #{truename,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        userName = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null">
+        userType = #{usertype,jdbcType=INTEGER},
+      </if>
+      <if test="inneruser != null">
+        innerUser = #{inneruser,jdbcType=BIT},
+      </if>
+      <if test="expirdate != null">
+        expirDate = #{expirdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recommend != null">
+        recommend = #{recommend,jdbcType=BIT},
+      </if>
+      <if test="viplevel != null">
+        vipLevel = #{viplevel,jdbcType=BIGINT},
+      </if>
+      <if test="weixin != null">
+        weixin = #{weixin,jdbcType=VARCHAR},
+      </if>
+      <if test="weixincodepath != null">
+        weixinCodePath = #{weixincodepath,jdbcType=VARCHAR},
+      </if>
+      <if test="weixinlogopath != null">
+        weixinLogoPath = #{weixinlogopath,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="provinceid != null">
+        provinceId = #{provinceid,jdbcType=BIGINT},
+      </if>
+      <if test="yaoqinguserid != null">
+        yaoqingUserId = #{yaoqinguserid,jdbcType=BIGINT},
+      </if>
+      <if test="weixinopenid != null">
+        weixinOpenId = #{weixinopenid,jdbcType=VARCHAR},
+      </if>
+      <if test="kakaUserid != null">
+        kaka_userId = #{kakaUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="idsAkk != null">
+        ids_akk = #{idsAkk,jdbcType=VARCHAR},
+      </if>
+      <if test="touzhuTotal != null">
+        touzhu_total = #{touzhuTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="winTotal != null">
+        win_total = #{winTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="isSendMsg != null">
+        is_send_msg = #{isSendMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.com.shop.entity.YygUser">
+    update yyg_user
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      storeId = #{storeid,jdbcType=BIGINT},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      accountBalance = #{accountbalance,jdbcType=DECIMAL},
+      address = #{address,jdbcType=VARCHAR},
+      areaId = #{areaid,jdbcType=BIGINT},
+      cardNo = #{cardno,jdbcType=VARCHAR},
+      cityId = #{cityid,jdbcType=BIGINT},
+      email = #{email,jdbcType=VARCHAR},
+      headPhotoPath = #{headphotopath,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      nickName = #{nickname,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      seqNo = #{seqno,jdbcType=BIGINT},
+      trueName = #{truename,jdbcType=VARCHAR},
+      userName = #{username,jdbcType=VARCHAR},
+      userType = #{usertype,jdbcType=INTEGER},
+      innerUser = #{inneruser,jdbcType=BIT},
+      expirDate = #{expirdate,jdbcType=TIMESTAMP},
+      recommend = #{recommend,jdbcType=BIT},
+      vipLevel = #{viplevel,jdbcType=BIGINT},
+      weixin = #{weixin,jdbcType=VARCHAR},
+      weixinCodePath = #{weixincodepath,jdbcType=VARCHAR},
+      weixinLogoPath = #{weixinlogopath,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=INTEGER},
+      provinceId = #{provinceid,jdbcType=BIGINT},
+      yaoqingUserId = #{yaoqinguserid,jdbcType=BIGINT},
+      weixinOpenId = #{weixinopenid,jdbcType=VARCHAR},
+      kaka_userId = #{kakaUserid,jdbcType=VARCHAR},
+      ids_akk = #{idsAkk,jdbcType=VARCHAR},
+      touzhu_total = #{touzhuTotal,jdbcType=DOUBLE},
+      win_total = #{winTotal,jdbcType=DOUBLE},
+      is_send_msg = #{isSendMsg,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygUser">
+    update yyg_user
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      storeId = #{storeid,jdbcType=BIGINT},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      accountBalance = #{accountbalance,jdbcType=DECIMAL},
+      address = #{address,jdbcType=VARCHAR},
+      areaId = #{areaid,jdbcType=BIGINT},
+      cardNo = #{cardno,jdbcType=VARCHAR},
+      cityId = #{cityid,jdbcType=BIGINT},
+      email = #{email,jdbcType=VARCHAR},
+      headPhotoPath = #{headphotopath,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      nickName = #{nickname,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      seqNo = #{seqno,jdbcType=BIGINT},
+      trueName = #{truename,jdbcType=VARCHAR},
+      userName = #{username,jdbcType=VARCHAR},
+      userType = #{usertype,jdbcType=INTEGER},
+      innerUser = #{inneruser,jdbcType=BIT},
+      expirDate = #{expirdate,jdbcType=TIMESTAMP},
+      recommend = #{recommend,jdbcType=BIT},
+      vipLevel = #{viplevel,jdbcType=BIGINT},
+      weixin = #{weixin,jdbcType=VARCHAR},
+      weixinCodePath = #{weixincodepath,jdbcType=VARCHAR},
+      weixinLogoPath = #{weixinlogopath,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=INTEGER},
+      provinceId = #{provinceid,jdbcType=BIGINT},
+      yaoqingUserId = #{yaoqinguserid,jdbcType=BIGINT},
+      weixinOpenId = #{weixinopenid,jdbcType=VARCHAR},
+      kaka_userId = #{kakaUserid,jdbcType=VARCHAR},
+      ids_akk = #{idsAkk,jdbcType=VARCHAR},
+      touzhu_total = #{touzhuTotal,jdbcType=DOUBLE},
+      win_total = #{winTotal,jdbcType=DOUBLE},
+      is_send_msg = #{isSendMsg,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

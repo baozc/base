@@ -1,0 +1,278 @@
+{
+  "groups": [
+    {
+      "name": "card",
+      "type": "cn.baozcc.me.configuration.constant.Constants",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "mysql",
+      "type": "javax.sql.DataSource",
+      "sourceType": "cn.baozcc.me.configuration.datasource.DataSourceConfig",
+      "sourceMethod": "mysqlDataSource()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "card.app-info-map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "应用信息map @author zhaochen  2013-8-26 下午04:36:24",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.app-role-byperson",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.app-role-open",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.app-user-status-false",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.app-user-status-true",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.appkey",
+      "type": "java.lang.String",
+      "description": "生产环境appkey,spid,spps",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "PMORL"
+    },
+    {
+      "name": "card.attendance-time",
+      "type": "java.lang.String",
+      "description": "上班时间",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.circle-channel",
+      "type": "java.lang.String",
+      "description": "微分享手机端小字报url @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.closing-time",
+      "type": "java.lang.String",
+      "description": "下班时间",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.config-app-get-info-type",
+      "type": "java.lang.String",
+      "description": "消息推送 判断是通过手机号（mobile）推送还是账号（account）推送",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.db-app-map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "应用比对全局map @author zhaochen  2013-8-26 下午04:36:24",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.db-driver",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.default-distance",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.default-lat",
+      "type": "java.lang.Double",
+      "description": "默认工作地点纬度",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.default-lon",
+      "type": "java.lang.Double",
+      "description": "默认工作地点经度",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.doms-oa",
+      "type": "java.lang.String",
+      "description": "会议室固定appkey @author zhaochen  2013-10-14 上午10:30:55",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "schedule"
+    },
+    {
+      "name": "card.email-list",
+      "type": "java.lang.String",
+      "description": "需要",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.from-phone-oa",
+      "type": "java.lang.String",
+      "description": "会议室固定推送电话号码 @author zhaochen  2013-10-14 上午10:30:55",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "ultrapoweroa"
+    },
+    {
+      "name": "card.http-connection-sotimeout",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.http-connection-timeout",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.http-connmanager-timeout",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.image-upload-type",
+      "type": "java.lang.String",
+      "description": "应用注册文件上传类型 image @author zhaochen  2013-10-21 下午02:10:39",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "img"
+    },
+    {
+      "name": "card.init-app",
+      "type": "java.lang.String",
+      "description": "初始化app信息 @author zhaochen  2013-11-5 下午03:11:06",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.is-allow-outside",
+      "type": "java.lang.String",
+      "description": "是否允许范围外打卡",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.is-use-pmo",
+      "type": "java.lang.String",
+      "description": "是否使用PMO标记",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.is-use-pmo-v1",
+      "type": "java.lang.String",
+      "description": "是否使用PMO标记",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.me-channel",
+      "type": "java.lang.String",
+      "description": "信息通道服务url @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.me-multimedia",
+      "type": "java.lang.String",
+      "description": "图片服务器url @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.me-open-auth",
+      "type": "java.lang.String",
+      "description": "鉴权服务url @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.me-open-auth-port",
+      "type": "java.lang.String",
+      "description": "鉴权服务端口 @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.me-open-port",
+      "type": "java.lang.String",
+      "description": "MeOpen服务端口 @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.me-security-key",
+      "type": "java.lang.String",
+      "description": "参数加密密钥 @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.page-no",
+      "type": "java.lang.String",
+      "description": "初始化第1页 @author zhaochen  2013-12-23 下午05:10:20",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "1"
+    },
+    {
+      "name": "card.page-size",
+      "type": "java.lang.String",
+      "description": "初始化每页显示10条 @author zhaochen  2013-12-23 下午05:10:37",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "10"
+    },
+    {
+      "name": "card.pasm-token-plugin-uri",
+      "type": "java.lang.String",
+      "description": "pasm 鉴权插件 url @author zhaochen  2013-9-5 下午02:49:30",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.pasm-uri",
+      "type": "java.lang.String",
+      "description": "pasm集成路径 @author zhaochen  2013-9-5 下午02:48:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.pmo-channel",
+      "type": "java.lang.String",
+      "description": "pmo通道服务url @author zhaochen  2013-9-5 下午02:58:28",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.public-set-map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "公共配置Map对象",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.root-dept",
+      "type": "java.lang.String",
+      "description": "需要过滤的部门名",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.spid",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "855680eedaf52b5fba7d0a3761e9d6e4"
+    },
+    {
+      "name": "card.spps",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "ajcgdt"
+    },
+    {
+      "name": "card.worklocation",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.worklocation-alias",
+      "type": "java.lang.String",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants"
+    },
+    {
+      "name": "card.xml-upload-type",
+      "type": "java.lang.String",
+      "description": "应用注册文件上传类型 xml @author zhaochen  2013-10-21 下午02:10:39",
+      "sourceType": "cn.baozcc.me.configuration.constant.Constants",
+      "defaultValue": "xml"
+    }
+  ],
+  "hints": []
+}

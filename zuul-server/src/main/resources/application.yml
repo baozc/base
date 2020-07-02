@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: gateway-server-zuul
+
+zuul:
+  routes:
+    baidu:
+      strip-prefix: false
+      path: /it/**
+      url: http://www.ityouknow.com/
+    api-a:
+      strip-prefix: false
+      path: /api-a/**
+      serviceId: EUREKA-CLIENT1
+    api-b:
+      strip-prefix: false
+      path: /api-b/**
+      serviceId: EUREKA-CLIENT-CONSUMER
+
+eureka:
+  instance:
+    hostname: localhost
+#    preferIpAddress: true    #设为true使用IP注册，默认是使用hostname注册调用时可能无法识别主机名
+##    instanceId: ${spring.cloud.client.ipAddress}:${server.port}  #注册实例ID生成规则
+#    instanceId: 10.101.101.1:${server.port}  #注册实例ID生成规则
+  client:
+    service-url:
+      defaultZone: http://lykj:lykjMtEureka@192.168.10.18:8761/eureka/
+      
+server:
+  port: 8004
+  url: localhost

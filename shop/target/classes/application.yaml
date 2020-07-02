@@ -1,0 +1,63 @@
+spring:
+#  devtools:
+#    restart:
+#      exclude: static/**
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+  resources:
+    chain:
+      strategy:
+        fixed:
+          enabled: true
+          paths: /js/**,/v1.0.0/**
+          version: v1.0.0
+  freemarker:
+    cache: false
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 30
+      initial-size: 10
+      max-wait: 60000
+      min-idle: 10
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+    url: jdbc:mysql://127.0.0.1:3306/yyyd?useSSL=false&characterEncoding=utf8&useAffectedRows=true&autoReconnect=true&failOverReadOnly=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+
+mybatis:
+  config-location: classpath:/mybatis-config.xml
+  mapper-locations: classpath:/cn/com/shop/**/dao/maps/*Mapper.xml
+  
+pagehelper:
+  helperDialect: mysql
+#  reasonable: true
+#  supportMethodsArguments: true
+#  params: count=countSql
+
+#  servlet:
+server:
+  port: 8888
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+#    context-path: /szty-web
+
+
+img:
+  serverpath: http\://localhost\:8080
+  
+file:
+  rootpath: /Users/baozc/ideaProjects/base/shop/assets/yg
+#是否开启测试
+istest: true
+#测试账号id
+test_user_id: 21
+www.domain: http\://localhost\:8080
+#www.domain: http\://baozcc.cn\:80

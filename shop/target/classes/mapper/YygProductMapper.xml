@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.shop.mapper.YygProductMapper">
+  <resultMap id="BaseResultMap" type="cn.com.shop.entity.YygProduct">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="createBy" jdbcType="VARCHAR" property="createby" />
+    <result column="createById" jdbcType="BIGINT" property="createbyid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="deleteStatus" jdbcType="BIT" property="deletestatus" />
+    <result column="lastModifyBy" jdbcType="VARCHAR" property="lastmodifyby" />
+    <result column="lastModifyById" jdbcType="BIGINT" property="lastmodifybyid" />
+    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="brandId" jdbcType="BIGINT" property="brandid" />
+    <result column="storeId" jdbcType="BIGINT" property="storeid" />
+    <result column="cateId" jdbcType="VARCHAR" property="cateid" />
+    <result column="contentId" jdbcType="BIGINT" property="contentid" />
+    <result column="limitPeriods" jdbcType="BIGINT" property="limitperiods" />
+    <result column="logoPath" jdbcType="VARCHAR" property="logopath" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="origPrice" jdbcType="BIGINT" property="origprice" />
+    <result column="totalNum" jdbcType="BIGINT" property="totalnum" />
+    <result column="singlePrice" jdbcType="BIGINT" property="singleprice" />
+    <result column="period" jdbcType="BIGINT" property="period" />
+    <result column="photos" jdbcType="VARCHAR" property="photos" />
+    <result column="recommend" jdbcType="BIT" property="recommend" />
+    <result column="seoDesc" jdbcType="VARCHAR" property="seodesc" />
+    <result column="seoKey" jdbcType="VARCHAR" property="seokey" />
+    <result column="seoTitle" jdbcType="VARCHAR" property="seotitle" />
+    <result column="seqNo" jdbcType="BIGINT" property="seqno" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="weixin_buy" jdbcType="VARCHAR" property="weixinBuy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, createBy, createById, createTime, deleteStatus, lastModifyBy, lastModifyById, 
+    lastModifyTime, version, brandId, storeId, cateId, contentId, limitPeriods, logoPath, 
+    name, title, origPrice, totalNum, singlePrice, period, photos, recommend, seoDesc, 
+    seoKey, seoTitle, seqNo, status, weixin_buy
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from yyg_product
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from yyg_product
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.shop.entity.YygProduct">
+    insert into yyg_product (id, createBy, createById, 
+      createTime, deleteStatus, lastModifyBy, 
+      lastModifyById, lastModifyTime, version, 
+      brandId, storeId, cateId, 
+      contentId, limitPeriods, logoPath, 
+      name, title, origPrice, 
+      totalNum, singlePrice, period, 
+      photos, recommend, seoDesc, 
+      seoKey, seoTitle, seqNo, 
+      status, weixin_buy)
+    values (#{id,jdbcType=BIGINT}, #{createby,jdbcType=VARCHAR}, #{createbyid,jdbcType=BIGINT}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{deletestatus,jdbcType=BIT}, #{lastmodifyby,jdbcType=VARCHAR}, 
+      #{lastmodifybyid,jdbcType=BIGINT}, #{lastmodifytime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT}, 
+      #{brandid,jdbcType=BIGINT}, #{storeid,jdbcType=BIGINT}, #{cateid,jdbcType=VARCHAR}, 
+      #{contentid,jdbcType=BIGINT}, #{limitperiods,jdbcType=BIGINT}, #{logopath,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{origprice,jdbcType=BIGINT}, 
+      #{totalnum,jdbcType=BIGINT}, #{singleprice,jdbcType=BIGINT}, #{period,jdbcType=BIGINT}, 
+      #{photos,jdbcType=VARCHAR}, #{recommend,jdbcType=BIT}, #{seodesc,jdbcType=VARCHAR}, 
+      #{seokey,jdbcType=VARCHAR}, #{seotitle,jdbcType=VARCHAR}, #{seqno,jdbcType=BIGINT}, 
+      #{status,jdbcType=INTEGER}, #{weixinBuy,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.shop.entity.YygProduct">
+    insert into yyg_product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="createby != null">
+        createBy,
+      </if>
+      <if test="createbyid != null">
+        createById,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus,
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy,
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById,
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="brandid != null">
+        brandId,
+      </if>
+      <if test="storeid != null">
+        storeId,
+      </if>
+      <if test="cateid != null">
+        cateId,
+      </if>
+      <if test="contentid != null">
+        contentId,
+      </if>
+      <if test="limitperiods != null">
+        limitPeriods,
+      </if>
+      <if test="logopath != null">
+        logoPath,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="origprice != null">
+        origPrice,
+      </if>
+      <if test="totalnum != null">
+        totalNum,
+      </if>
+      <if test="singleprice != null">
+        singlePrice,
+      </if>
+      <if test="period != null">
+        period,
+      </if>
+      <if test="photos != null">
+        photos,
+      </if>
+      <if test="recommend != null">
+        recommend,
+      </if>
+      <if test="seodesc != null">
+        seoDesc,
+      </if>
+      <if test="seokey != null">
+        seoKey,
+      </if>
+      <if test="seotitle != null">
+        seoTitle,
+      </if>
+      <if test="seqno != null">
+        seqNo,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="weixinBuy != null">
+        weixin_buy,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="brandid != null">
+        #{brandid,jdbcType=BIGINT},
+      </if>
+      <if test="storeid != null">
+        #{storeid,jdbcType=BIGINT},
+      </if>
+      <if test="cateid != null">
+        #{cateid,jdbcType=VARCHAR},
+      </if>
+      <if test="contentid != null">
+        #{contentid,jdbcType=BIGINT},
+      </if>
+      <if test="limitperiods != null">
+        #{limitperiods,jdbcType=BIGINT},
+      </if>
+      <if test="logopath != null">
+        #{logopath,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="origprice != null">
+        #{origprice,jdbcType=BIGINT},
+      </if>
+      <if test="totalnum != null">
+        #{totalnum,jdbcType=BIGINT},
+      </if>
+      <if test="singleprice != null">
+        #{singleprice,jdbcType=BIGINT},
+      </if>
+      <if test="period != null">
+        #{period,jdbcType=BIGINT},
+      </if>
+      <if test="photos != null">
+        #{photos,jdbcType=VARCHAR},
+      </if>
+      <if test="recommend != null">
+        #{recommend,jdbcType=BIT},
+      </if>
+      <if test="seodesc != null">
+        #{seodesc,jdbcType=VARCHAR},
+      </if>
+      <if test="seokey != null">
+        #{seokey,jdbcType=VARCHAR},
+      </if>
+      <if test="seotitle != null">
+        #{seotitle,jdbcType=VARCHAR},
+      </if>
+      <if test="seqno != null">
+        #{seqno,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="weixinBuy != null">
+        #{weixinBuy,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.shop.entity.YygProduct">
+    update yyg_product
+    <set>
+      <if test="createby != null">
+        createBy = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createbyid != null">
+        createById = #{createbyid,jdbcType=BIGINT},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deletestatus != null">
+        deleteStatus = #{deletestatus,jdbcType=BIT},
+      </if>
+      <if test="lastmodifyby != null">
+        lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifybyid != null">
+        lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      </if>
+      <if test="lastmodifytime != null">
+        lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="brandid != null">
+        brandId = #{brandid,jdbcType=BIGINT},
+      </if>
+      <if test="storeid != null">
+        storeId = #{storeid,jdbcType=BIGINT},
+      </if>
+      <if test="cateid != null">
+        cateId = #{cateid,jdbcType=VARCHAR},
+      </if>
+      <if test="contentid != null">
+        contentId = #{contentid,jdbcType=BIGINT},
+      </if>
+      <if test="limitperiods != null">
+        limitPeriods = #{limitperiods,jdbcType=BIGINT},
+      </if>
+      <if test="logopath != null">
+        logoPath = #{logopath,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="origprice != null">
+        origPrice = #{origprice,jdbcType=BIGINT},
+      </if>
+      <if test="totalnum != null">
+        totalNum = #{totalnum,jdbcType=BIGINT},
+      </if>
+      <if test="singleprice != null">
+        singlePrice = #{singleprice,jdbcType=BIGINT},
+      </if>
+      <if test="period != null">
+        period = #{period,jdbcType=BIGINT},
+      </if>
+      <if test="photos != null">
+        photos = #{photos,jdbcType=VARCHAR},
+      </if>
+      <if test="recommend != null">
+        recommend = #{recommend,jdbcType=BIT},
+      </if>
+      <if test="seodesc != null">
+        seoDesc = #{seodesc,jdbcType=VARCHAR},
+      </if>
+      <if test="seokey != null">
+        seoKey = #{seokey,jdbcType=VARCHAR},
+      </if>
+      <if test="seotitle != null">
+        seoTitle = #{seotitle,jdbcType=VARCHAR},
+      </if>
+      <if test="seqno != null">
+        seqNo = #{seqno,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="weixinBuy != null">
+        weixin_buy = #{weixinBuy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.shop.entity.YygProduct">
+    update yyg_product
+    set createBy = #{createby,jdbcType=VARCHAR},
+      createById = #{createbyid,jdbcType=BIGINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      deleteStatus = #{deletestatus,jdbcType=BIT},
+      lastModifyBy = #{lastmodifyby,jdbcType=VARCHAR},
+      lastModifyById = #{lastmodifybyid,jdbcType=BIGINT},
+      lastModifyTime = #{lastmodifytime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=BIGINT},
+      brandId = #{brandid,jdbcType=BIGINT},
+      storeId = #{storeid,jdbcType=BIGINT},
+      cateId = #{cateid,jdbcType=VARCHAR},
+      contentId = #{contentid,jdbcType=BIGINT},
+      limitPeriods = #{limitperiods,jdbcType=BIGINT},
+      logoPath = #{logopath,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      origPrice = #{origprice,jdbcType=BIGINT},
+      totalNum = #{totalnum,jdbcType=BIGINT},
+      singlePrice = #{singleprice,jdbcType=BIGINT},
+      period = #{period,jdbcType=BIGINT},
+      photos = #{photos,jdbcType=VARCHAR},
+      recommend = #{recommend,jdbcType=BIT},
+      seoDesc = #{seodesc,jdbcType=VARCHAR},
+      seoKey = #{seokey,jdbcType=VARCHAR},
+      seoTitle = #{seotitle,jdbcType=VARCHAR},
+      seqNo = #{seqno,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      weixin_buy = #{weixinBuy,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
