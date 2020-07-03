@@ -8,6 +8,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import cn.baozcc.me.annotation.ConvertClass;
 import cn.baozcc.me.annotation.ConvertField;
@@ -27,7 +28,9 @@ public class BeanConvert {
     private static List<String> types;
 
     static {
-        String[] type = {"java.lang.Integer",
+        String[] type = {
+                "java.",
+                "java.lang.Integer",
                 "java.lang.Double",
                 "java.lang.Float",
                 "java.lang.Long",
@@ -124,13 +127,15 @@ public class BeanConvert {
                     continue;
                 }
 
-                boolean isBasicType = types.stream().anyMatch(t -> t.equals(field.getType().getName()));
+                boolean isBasicType = types.stream().anyMatch(t -> field.getType().getName().contains(t));
                 if (checkField(field, targetField, isBasicType)) {
                     continue;
                 }
 
                 if (field.getType().isAssignableFrom(List.class)) {
                     setTargetListField(target, targetField, field, value);
+                } else if (field.getType().isAssignableFrom(Map.class)) {
+                    targetField.set(target, value);
                 } else {
                     setTargetField(target, targetField, field, value, isBasicType);
                 }
